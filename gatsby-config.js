@@ -1,9 +1,8 @@
+const { readFileSync } = require('fs');
+const yaml = require('js-yaml');
+
 module.exports = {
-  siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-  },
+  siteMetadata: yaml.safeLoad(readFileSync(`${__dirname}/metadata.yaml`)),
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
@@ -27,8 +26,54 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-plugin-typescript`,
+    },
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: 'research',
+        path: `${__dirname}/content`,
+      },
+    },
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-katex',
+            options: {
+              strict: 'ignore',
+            },
+          },
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 960,
+            },
+          },
+        ],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-codegen',
+      options: {
+        output: `${__dirname}/src/types/graphql.d.ts`,
+        outputFlat: true,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-theme-ui',
+    },
+    {
+      resolve: 'gatsby-plugin-google-fonts',
+      options: {
+        fonts: ['IBM Plex Sans'],
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};
