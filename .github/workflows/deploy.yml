@@ -26,10 +26,16 @@ jobs:
             ${{ runner.os }}-yarn-
         
       - name: Install and Build 🔧
-        run: yarn install
-        
-      - name: Deploy 🚀  
         env:
           GH_PAGES_PREFIX: /${{github.repository}}
+        run: |
+          yarn install
+          yarn build
+        
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@3.6.1
+        with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: yarn deploy:gh
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: build # The folder the action should deploy.
+          CLEAN: true # Automatically remove deleted files from the deploy branch

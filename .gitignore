@@ -68,6 +68,8 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 
-# Genrerated types
+# Generated types
 
 src/types/*.d.ts
+schema.json
+apollo.config.js
