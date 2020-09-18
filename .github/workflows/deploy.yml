@@ -28,7 +28,8 @@ jobs:
       - name: Install and Build 🔧
         run: yarn install
         
-      - name: Deploy 🚀
+      - name: Deploy 🚀  
         env:
           GH_PAGES_PREFIX: /${{github.repository}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: yarn deploy:gh
