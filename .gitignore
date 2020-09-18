@@ -70,4 +70,4 @@ yarn-error.log
 
 # Genrerated types
 
-src/types
+src/types/*.d.ts

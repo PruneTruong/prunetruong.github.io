@@ -3,6 +3,7 @@ const yaml = require('js-yaml');
 
 module.exports = {
   siteMetadata: yaml.safeLoad(readFileSync(`${__dirname}/metadata.yaml`)),
+  pathPrefix: process.env.GH_PAGES_PREFIX ? process.env.GH_PAGES_PREFIX : '/',
   plugins: [
     `gatsby-plugin-react-helmet`,
     {

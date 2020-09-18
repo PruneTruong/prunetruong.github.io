@@ -42,6 +42,7 @@
     "@types/react-dom": "^16.9.8",
     "@types/rebass": "^4.0.6",
     "@types/theme-ui": "^0.3.6",
+    "gh-pages": "^3.1.0",
     "prettier": "2.1.1",
     "ts-node": "^9.0.0"
   },
@@ -59,7 +60,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "deploy:gh": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "repository": {
     "type": "git",
