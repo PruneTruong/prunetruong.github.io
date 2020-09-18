@@ -44,23 +44,6 @@ const shadow = px.map(v => `rgba(0, 0, 0, 0.10) 0px ${v} ${v} 0px`);
 
 const Research: FC<ResearchArticleProps> = ({ data: { post } }) => (
   <Layout>
-    <SEO
-      title={post.frontmatter.title}
-      description={post.frontmatter.description}
-    />
-    <Heading variant="styles.h2">{post.frontmatter.title}</Heading>
-    <p
-      sx={{
-        color: `secondary`,
-        mt: 3,
-        a: { color: `secondary` },
-        fontSize: [1, 1, 2],
-      }}
-    >
-      <time>{post.frontmatter.date}</time>
-      {post.timeToRead && ` — `}
-      {post.timeToRead && <span>{post.timeToRead} min read</span>}
-    </p>
     <section
       sx={{
         my: 5,

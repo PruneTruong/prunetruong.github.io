@@ -25,7 +25,7 @@ export const Layout: FC<{ children: ReactNode }> = ({ children }) => {
       />
       <Container
         sx={{
-          maxWidth: 960,
+          maxWidth: 1250,
           margin: '0 auto',
         }}
       >
