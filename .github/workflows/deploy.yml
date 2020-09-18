@@ -27,7 +27,7 @@ jobs:
         
       - name: Install and Build 🔧
         env:
-          GH_PAGES_PREFIX: /${{github.repository}}
+          GH_PAGES_PREFIX: /${{github.event.repository.name}}
         run: |
           yarn install
           yarn build
