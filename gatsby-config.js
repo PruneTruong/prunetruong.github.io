@@ -49,6 +49,17 @@ module.exports = {
             },
           },
           {
+            resolve: `gatsby-remark-copy-linked-files`,
+            options: {},
+          },
+          {
+            resolve: 'gatsby-remark-embed-video',
+            options: {},
+          },
+          {
+            resolve: 'gatsby-remark-responsive-iframe',
+          },
+          {
             resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 960,

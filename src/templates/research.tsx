@@ -10,18 +10,18 @@ import styled from '@emotion/styled';
 const katex = require(`katex/dist/katex.min.css`);
 
 export const pageQuery = graphql`
-  query BlogPostByPath($path: String!) {
-    post: markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
-      frontmatter {
-        date(formatString: "YYYY-MM-DD")
-        path
-        title
-      }
-      timeToRead
-      excerpt
+    query BlogPostByPath($path: String!) {
+        post: markdownRemark(frontmatter: { path: { eq: $path } }) {
+            html
+            frontmatter {
+                date(formatString: "YYYY-MM-DD")
+                path
+                title
+            }
+            timeToRead
+            excerpt
+        }
     }
-  }
 `;
 
 interface ResearchArticleProps {
@@ -51,7 +51,19 @@ const Research: FC<ResearchArticleProps> = ({ data: { post } }) => (
           my: [4, 4, 5],
           boxShadow: shadow.join(`, `),
         },
-        figcaption: { mt: -4, textAlign: 'center', fontStyle: 'italic' },
+        figure: {
+          '&[inline]': {
+            display: 'inline-block',
+          },
+          img: {
+            width: '100%',
+          },
+          '.gatsby-resp-image-wrapper': {
+            mb: 2,
+          },
+          figcaption: { textAlign: 'center', fontStyle: 'italic' },
+          mx: 0,
+        },
         p: { fontSize: 2 },
         h1: { fontSize: 6 },
         h2: { fontSize: 5 },
@@ -66,6 +78,9 @@ const Research: FC<ResearchArticleProps> = ({ data: { post } }) => (
           fontFamily: 'monospace',
         },
         variant: `layout.content`,
+        '.flex-row': {
+          display: 'flex',
+        }
       }}
     >
       <div dangerouslySetInnerHTML={{ __html: post.html }} />

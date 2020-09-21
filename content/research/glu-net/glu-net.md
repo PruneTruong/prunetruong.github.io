@@ -15,10 +15,34 @@ description: Description
 
 ### 
 
-
-
+`youtube: ltZpqRtuA6A`
 
 ![](./preview.gif)
+
+<div class="flex-row">
+    <figure>
+      <img src="./ETH3D/playground_0_40_DGCNet.gif">
+      <figcaption>DCG-Net architecture</figcaption>
+    </figure>
+    <figure>
+      <img src="./ETH3D/playground_0_40_GLUNet.gif">
+      <figcaption>GLU-Net architecture</figcaption>
+    </figure>
+    <figure>
+      <img src="./ETH3D/playground_0_40_PWCNet.gif">
+      <figcaption>PWC-Net architecture</figcaption>
+    </figure>
+    <figure>
+      <img src="./ETH3D/playground_0_40_PWCNet.gif">
+      <figcaption>PWC-Net architecture</figcaption>
+    </figure>
+</div>
+
+
+<figure inline style="width: 30%">
+  <img src="./glunet.png">
+  <figcaption>GLU-Net architecture</figcaption>
+</figure>
 
 <figure>
   <img src="./glunet.png">
