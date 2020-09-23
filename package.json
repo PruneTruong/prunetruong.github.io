@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@icons-pack/react-simple-icons": "^3.10.0",
     "@mdx-js/mdx": "^1.6.16",
     "@theme-ui/color": "^0.3.1",
     "@theme-ui/preset-base": "^0.3.0",

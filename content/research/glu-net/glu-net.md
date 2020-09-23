@@ -5,6 +5,14 @@ title: 'GLU-Net'
 date: '2020-08-01'
 featured: true
 description: Description
+
+links:
+    - type: github
+      link: https://github.com/PruneTruong/GLU-Net
+    - type: youtube
+      link: https://youtube.com/
+    - type: arxiv
+      link: https://arxiv.org/abs/1912.05524
 ---
 # <div align="center">GLU-Net: Global-Local Universal Network for dense flow and correspondences</div>
 ## <div align="center">CVPR 2020 - ORAL</div>

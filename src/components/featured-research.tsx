@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from 'theme-ui';
 import {
   ResearchSectionQuery,
   ResearchSectionQuery_allMarkdownRemark_nodes,
@@ -8,6 +10,8 @@ import React, { FC } from 'react';
 import truncateText from '../utils/truncate-text';
 import { Box, Flex, Heading, Text } from 'rebass';
 import Img from 'gatsby-image';
+import { Arxiv, Github, Youtube } from '@icons-pack/react-simple-icons';
+import theme from '../gatsby-plugin-theme-ui';
 
 const DESCRIPTION_MAX_LENGTH = 300;
 
@@ -22,6 +26,39 @@ const UndecoratedLink = styled(Link)`
     color: inherit;
   }
 `;
+
+interface ResearchPostLinksProps {
+  links: Array<{
+    type: string;
+    link: string;
+  }>
+}
+
+const LINKS_ICON_SIZE = 24;
+const LINK_ICON_COLOR = theme.colors.secondary;
+const LINKS_ICON_MAP = {
+  youtube: <Youtube size={LINKS_ICON_SIZE} color={LINK_ICON_COLOR} />,
+  arxiv: <Arxiv size={LINKS_ICON_SIZE} color={LINK_ICON_COLOR} />,
+  github: <Github size={LINKS_ICON_SIZE} color={LINK_ICON_COLOR} />
+} as const;
+
+const ResearchPostLinks: FC<ResearchPostLinksProps> = ({links}) => {
+  return <footer sx={{
+    display: 'flex',
+    justifyContent: 'space-around',
+    p: 1,
+    'a:hover > svg': {
+      fill: theme.colors.primary,
+      transition: '0.3s ease-in-out'
+    }
+  }}>
+    {links.map(({type, link}) =>
+      (<a href={link}>
+        {LINKS_ICON_MAP[type] || type}
+      </a>)
+    )}
+  </footer>
+}
 
 const ResearchPost: FC<ResearchPostProps> = ({ post }) => {
   const renderDescription = () => {
@@ -55,6 +92,9 @@ const ResearchPost: FC<ResearchPostProps> = ({ post }) => {
           <Text as="p" variant="justified" fontSize={1} px={2} pb={2}>
             {renderDescription()}
           </Text>
+
+          {post.frontmatter?.links && <ResearchPostLinks links={post.frontmatter.links} />}
+
         </section>
       </Box>
     </UndecoratedLink>
@@ -87,6 +127,10 @@ const FeaturedResearch: FC = () => {
                 }
               }
             }
+            links {
+                type
+                link
+            }
           }
           excerpt
           timeToRead
@@ -96,7 +140,7 @@ const FeaturedResearch: FC = () => {
   `);
 
   return (
-    <>
+    <React.Fragment>
       <Heading as={'h2'}>Research</Heading>
       <Flex ml={4} my={2} justifyContent="space-around" flexWrap="wrap">
         {Array(6)
@@ -105,7 +149,7 @@ const FeaturedResearch: FC = () => {
             <ResearchPost key={node.id} post={node} />
           ))}
       </Flex>
-    </>
+    </React.Fragment>
   );
 };
 
