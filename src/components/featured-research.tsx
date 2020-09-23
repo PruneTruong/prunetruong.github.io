@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from 'theme-ui';
 import {
   ResearchSectionQuery,
   ResearchSectionQuery_allMarkdownRemark_nodes,
@@ -10,8 +8,7 @@ import React, { FC } from 'react';
 import truncateText from '../utils/truncate-text';
 import { Box, Flex, Heading, Text } from 'rebass';
 import Img from 'gatsby-image';
-import { Arxiv, Github, Youtube } from '@icons-pack/react-simple-icons';
-import theme from '../gatsby-plugin-theme-ui';
+import ResearchLinks from './research-links';
 
 const DESCRIPTION_MAX_LENGTH = 300;
 
@@ -27,38 +24,16 @@ const UndecoratedLink = styled(Link)`
   }
 `;
 
-interface ResearchPostLinksProps {
-  links: Array<{
-    type: string;
-    link: string;
-  }>
-}
-
-const LINKS_ICON_SIZE = 24;
-const LINK_ICON_COLOR = theme.colors.secondary;
-const LINKS_ICON_MAP = {
-  youtube: <Youtube size={LINKS_ICON_SIZE} color={LINK_ICON_COLOR} />,
-  arxiv: <Arxiv size={LINKS_ICON_SIZE} color={LINK_ICON_COLOR} />,
-  github: <Github size={LINKS_ICON_SIZE} color={LINK_ICON_COLOR} />
-} as const;
-
-const ResearchPostLinks: FC<ResearchPostLinksProps> = ({links}) => {
-  return <footer sx={{
-    display: 'flex',
-    justifyContent: 'space-around',
-    p: 1,
-    'a:hover > svg': {
-      fill: theme.colors.primary,
-      transition: '0.3s ease-in-out'
-    }
-  }}>
-    {links.map(({type, link}) =>
-      (<a href={link}>
-        {LINKS_ICON_MAP[type] || type}
-      </a>)
-    )}
-  </footer>
-}
+const StyledResearchLinks = styled(ResearchLinks)`
+  display: flex;
+  justify-content: space-around;
+  a > svg {
+    transition: 0.3s ease-in-out;
+  }
+  a:hover > svg {
+    fill: ${props => props.theme.colors.primary};
+  }
+`;
 
 const ResearchPost: FC<ResearchPostProps> = ({ post }) => {
   const renderDescription = () => {
@@ -93,7 +68,7 @@ const ResearchPost: FC<ResearchPostProps> = ({ post }) => {
             {renderDescription()}
           </Text>
 
-          {post.frontmatter?.links && <ResearchPostLinks links={post.frontmatter.links} />}
+          {post.frontmatter?.links && <StyledResearchLinks links={post.frontmatter.links} />}
 
         </section>
       </Box>
@@ -143,11 +118,9 @@ const FeaturedResearch: FC = () => {
     <React.Fragment>
       <Heading as={'h2'}>Research</Heading>
       <Flex ml={4} my={2} justifyContent="space-around" flexWrap="wrap">
-        {Array(6)
-          .fill(nodes[0], 0, 6)
-          .map(node => (
-            <ResearchPost key={node.id} post={node} />
-          ))}
+        {nodes.map(node => (
+          <ResearchPost key={node.id} post={node} />
+        ))}
       </Flex>
     </React.Fragment>
   );

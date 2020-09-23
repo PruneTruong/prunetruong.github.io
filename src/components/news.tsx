@@ -39,9 +39,14 @@ const News: FC = () => {
         sx={{
           ...theme.styles,
           fontSize: 1,
-          td: { paddingLeft: '2em', p: { padding: 0, margin: 0 } },
-          th: { padding: 0 },
-          'table td, table th': { borderBottomStyle: 'none' },
+          table: {
+            'td, th': {
+              borderBottomStyle: 'none',
+              verticalAlign: 'top'
+            },
+            td: { p: { padding: 0, margin: 0, ml: 4, fontSize: 1 } },
+            th: { padding: 0 },
+          }
         }}
       >
         <table>

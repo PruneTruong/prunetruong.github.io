@@ -6,6 +6,7 @@ import SEO from '../components/seo';
 import { Heading } from 'rebass';
 import { graphql } from 'gatsby';
 import styled from '@emotion/styled';
+import ResearchLinks from '../components/research-links';
 
 const katex = require(`katex/dist/katex.min.css`);
 
@@ -17,6 +18,10 @@ export const pageQuery = graphql`
                 date(formatString: "YYYY-MM-DD")
                 path
                 title
+                links {
+                    type
+                    link
+                }
             }
             timeToRead
             excerpt
@@ -31,6 +36,7 @@ interface ResearchArticleProps {
         title: string;
         date: string;
         description?: string;
+        links: Array<{type: string, link: string}>
       };
       html: string;
       excerpt: string;
@@ -39,6 +45,18 @@ interface ResearchArticleProps {
   };
 }
 
+const StyledResearchLinks = styled(ResearchLinks)`
+  display: flex;
+  justify-content: space-around;
+  a > svg {
+    transition: 0.3s ease-in-out;
+  }
+  a:hover > svg {
+    fill: ${props => props.theme.colors.primary};
+  }
+`;
+
+
 const px = [`16px`, `8px`, `4px`];
 const shadow = px.map(v => `rgba(0, 0, 0, 0.10) 0px ${v} ${v} 0px`);
 
@@ -46,7 +64,7 @@ const Research: FC<ResearchArticleProps> = ({ data: { post } }) => (
   <Layout>
     <section
       sx={{
-        my: 5,
+        my: 3,
         '.gatsby-resp-image-wrapper': {
           my: [4, 4, 5],
           boxShadow: shadow.join(`, `),
@@ -83,6 +101,9 @@ const Research: FC<ResearchArticleProps> = ({ data: { post } }) => (
         }
       }}
     >
+      <header>
+        {post.frontmatter?.links && <StyledResearchLinks links={post.frontmatter.links} size={46} />}
+      </header>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </section>
   </Layout>
