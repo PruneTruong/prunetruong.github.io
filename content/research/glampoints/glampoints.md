@@ -1,10 +1,10 @@
 ---
-preview: TSS-more.jpg
+preview: 
 path: '/research/glu-net'
-title: 'GLU-Net'
-date: '2020-04-01'
+title: 'GLAMpoints'
+date: '2019-08-01'
 featured: true
-description: CVPR 2020 - Oral
+description: ICCV 2019
 
 links:
     - type: github
@@ -14,10 +14,10 @@ links:
     - type: arxiv
       link: https://arxiv.org/abs/1912.05524
 ---
-
 # <div align="center">GLU-Net: Global-Local Universal Network for dense flow and correspondences</div>
 ## <div align="center">CVPR 2020 - ORAL</div>
 ## <div align="center">Prune Truong, Martin Danelljan, Radu Timofte</div>
+
 
 <img align="left" src="./preview.gif" alt="Made with Angular" title="Angular" width="30%" hspace="20"/>
 <img align="left" src="./glunet.png" alt="Made with Angular" title="Angular" width="30%" hspace="20"/>
