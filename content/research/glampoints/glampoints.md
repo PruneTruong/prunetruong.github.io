@@ -13,50 +13,30 @@ links:
       link: https://arxiv.org/abs/1908.06812
 ---
 
-# <div align="center">GLAMpoints: Greedily Learned Accurate Match points</div>
-## <div align="center">ICCV 2019</div>
-## <div align="center">Prune Truong, Stefanos Apostolopoulos, Agata Mosinska, Samuel Stucky, Carlos Ciller, Sandro~De~Zanet</div>
+
+## <div align="center"><span style="color:MediumBlue">GLAMpoints: Greedily Learned Accurate Match points</span></div>
+### <div align="center"><span style="color:Blue">ICCV 2019</span></div>
+#### <div align="center"><span style="color:MediumSlateBlue">Prune Truong &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Stefanos Apostolopoulos  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Agata Mosinska &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br> Samuel Stucky &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Carlos Ciller  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sandro De Zanet &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></span></div>
+
+<div align="center">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://arxiv.org/abs/1908.06812"  style="text-decoration: none;color: DarkBlue ">Paper</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://github.com/PruneTruong/GLAMpoints_pytorch"  style="text-decoration: none;color: DarkBlue ">Code</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://drive.google.com/file/d/1706DRoMCr7adBnxws1iLcwUfJ1ClEant/view?usp=sharing"  style="text-decoration: none;color: DarkBlue ">Poster</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://www.retinai.com/glampoints"  style="text-decoration: none;color: DarkBlue ">Detailed Webpage</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</div>
 
 
+<hr style="border:0.01px solid LightGray"> </hr>
 
 <figure inline style="width: 100%">
-  <img src="./images/method_2.png">
-  <figcaption>a) Training steps for an image pair I_i and I'_i at epoch $i$ created from a particular base image $B$. $I_i$ and $I'_i$ are created by warping B according to homographies $g_i$ and $g'_i$ respectively. $a_i$ and $a'_i$ refer to the additional appearance augmentations applied to each image. b) Loss computation corresponding to situation a. c) Schematic representation of Unet-4</figcaption>
+  <img src="./images/glam.png">
+  <figcaption>Summary of the steps for training GLAMpoints</figcaption>
 </figure>
 
 ## Abstract
-We introduce a novel CNN-based feature point detector - \ac{GLAMpoints} - learned in a semi-supervised manner. Our detector extracts repeatable, stable interest points with a dense coverage, specifically designed to maximize the correct matching in a specific domain, which is in contrast to conventional techniques that optimize indirect metrics. In this paper, we apply our method on challenging retinal slitlamp images, for which classical detectors yield unsatisfactory results due to low image quality and insufficient amount of low-level features. We show that GLAMpoints significantly outperforms classical detectors as well as state-of-the-art CNN-based methods in matching and registration quality for retinal images. Our method can also be extended to other domains, such as natural images. Training code and model weights are available [here](https://github.com/PruneTruong/GLAMpoints_pytorch).
+We introduce a novel CNN-based feature point detector - **GLAMpoints** - learned in a semi-supervised manner. Our detector extracts repeatable, stable interest points with a dense coverage, specifically designed to maximize the correct matching in a specific domain, which is in contrast to conventional techniques that optimize indirect metrics. In this paper, we apply our method on challenging retinal slitlamp images, for which classical detectors yield unsatisfactory results due to low image quality and insufficient amount of low-level features. We show that GLAMpoints significantly outperforms classical detectors as well as state-of-the-art CNN-based methods in matching and registration quality for retinal images. Our method can also be extended to other domains, such as natural images. Training code and model weights are available [here](https://github.com/PruneTruong/GLAMpoints_pytorch).
 
-
-
-## Visual Results:
-
-* Aligning images of the ETH3D dataset
-
-Here, we warp the source images toward the target image. We compare our GLU-Net to state-of-the-art optical flow method PWC-Net and geometric matching method DGC-Net. 
-
-<div class="flex-row">
-    <figure>
-      <img src="./ETH3D/playground_0_40_source.gif">
-      <figcaption>Source images</figcaption>
-    </figure>
-    <figure>
-      <img src="./ETH3D/playground_0_40_target.gif">
-      <figcaption>Target image</figcaption>
-    </figure>
-    <figure>
-      <img src="./ETH3D/playground_0_40_GLUNet.gif">
-      <figcaption>**GLU-Net (Ours)**</figcaption>
-    </figure>
-    <figure>
-      <img src="./ETH3D/playground_0_40_PWCNet.gif">
-      <figcaption>PWC-Net</figcaption>
-    </figure>
-    <figure>
-      <img src="./ETH3D/playground_0_40_DGCNet.gif">
-      <figcaption>DGC-Net </figcaption>
-    </figure>
-</div>
 
 
 ## How to cite:
