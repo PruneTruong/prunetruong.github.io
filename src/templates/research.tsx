@@ -66,8 +66,7 @@ const Research: FC<ResearchArticleProps> = ({ data: { post } }) => (
       sx={{
         my: 3,
         '.gatsby-resp-image-wrapper': {
-          my: [4, 4, 5],
-          boxShadow: shadow.join(`, `),
+          my: [0, 0, 3],
         },
         figure: {
           '&[inline]': {

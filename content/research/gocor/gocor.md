@@ -25,7 +25,7 @@ links:
 
 <hr style="border:0.01px solid LightGray"> </hr>
 
-<figure inline style="width: 100%">
+<figure inline class=scaled style="width: 100%">
   <img src="./corr_diff_iteration.jpg">
   <figcaption>Visualization of the matching confidences computed between the indicated location (green) in the reference image and all locations of either the reference image itself or the query image.  The feature correlation generates undistinctive and inaccurate confidences due to similar regions and repetitive patterns. In contrast, our <b>GOCor</b> predicts a distinct high-confidence value at the correct location. </figcaption>
 </figure>
