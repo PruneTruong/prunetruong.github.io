@@ -1,6 +1,6 @@
 ---
 preview: sift_GLAMpoints_mosaic.png
-path: 'https://www.retinai.com/glampoints'
+path: '/research/glampoints'
 title: 'GLAMpoints [ICCV 2019]'
 date: '2019-08-01'
 featured: true
