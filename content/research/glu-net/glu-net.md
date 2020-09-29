@@ -1,7 +1,7 @@
 ---
 preview: ./intro_images_2.png
 path: '/research/glu-net'
-title: 'GLU-Net [CVPR 2020 - Oral]'
+title: 'GLU-Net [CVPR 2020 - ORAL]'
 date: '2020-04-01'
 featured: true
 description: Dense image matching, optical flow, geometric matching, semantic matching 

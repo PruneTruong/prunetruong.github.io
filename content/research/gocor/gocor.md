@@ -1,7 +1,7 @@
 ---
 preview: GOCor.png
 path: '/research/gocor'
-title: 'GOCor [NIPS 2020]'
+title: 'GOCor [NeurIPS 2020]'
 date: '2020-08-01'
 featured: true
 description: Feature correlation layer, online optimization, novel correlation layer, dense matching 
@@ -12,18 +12,18 @@ links:
     - type: arxiv
       link: https://arxiv.org/abs/2009.07823
 ---
+
 # <div align="center"><span style="color:MediumBlue">GOCor: Bringing Globally Optimized Correspondence Volumes into Your Neural Network</span></div>
-## <div align="center"><span style="color:Blue">NIPS 2020</span></div>
+## <div align="center"><span style="color:Blue">NeurIPS 2020</span></div>
 #### <div align="center"><span style="color:MediumSlateBlue">Prune Truong * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://martin-danelljan.github.io/"  style="text-decoration: none;color: MediumSlateBlue">Martin Danelljan</a> * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ee.ethz.ch/the-department/faculty/professors/person-detail.OTAyMzM=.TGlzdC80MTEsMTA1ODA0MjU5.html"  style="text-decoration: none;color: MediumSlateBlue">Luc Van Gool</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://people.ee.ethz.ch/~timofter/"  style="text-decoration: none;color: MediumSlateBlue">Radu Timofte</a></span></div>
 
-<div align="center">
-<a href="https://arxiv.org/abs/2009.07823"  style="text-decoration: none;color: DarkBlue ">Paper</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div align="center" style="background-color: lightblue">
+<a href="https://arxiv.org/abs/2009.07823"  style="text-decoration: none;color: DarkBlue">Paper</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="https://github.com/PruneTruong/GOCor" style="text-decoration: none;color: DarkBlue ">Code</a></div>
 
 
 <hr style="border:0.01px solid LightGray"> </hr>
-
 
 <figure inline style="width: 100%">
   <img src="./corr_diff_iteration.jpg">

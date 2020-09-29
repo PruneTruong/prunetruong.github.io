@@ -9,9 +9,7 @@ import theme from '../gatsby-plugin-theme-ui';
 
 const Navigation: FC = () => (
   <Box as="nav" sx={{ 'a:not(:last-of-type)': { mr: 3 }, fontSize: 1 }}>
-    <TLink as={Link} variant="links.secondary" href="#">
-      Research
-    </TLink>
+
   </Box>
 );
 
@@ -46,7 +44,7 @@ export const Header: FC = () => {
         alignItems="center"
         color="secondary"
         justifyContent="space-between"
-        mt={3}
+        mt={-4}
         variant="dividers.bottom"
         sx={{
           a: { color: 'secondary', ':hover': { color: 'heading' } },

@@ -12,6 +12,7 @@ links:
     - type: arxiv
       link: https://arxiv.org/abs/1908.06812
 ---
+
 # <div align="center">GLAMpoints: Greedily Learned Accurate Match points</div>
 ## <div align="center">ICCV 2019</div>
 ## <div align="center">Prune Truong, Stefanos Apostolopoulos, Agata Mosinska, Samuel Stucky, Carlos Ciller, Sandro~De~Zanet</div>
