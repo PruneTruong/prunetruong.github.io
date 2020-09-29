@@ -1,30 +1,40 @@
 ---
-preview: TSS-more.jpg
+preview: ./intro_images_2.png
 path: '/research/glu-net'
-title: 'GLU-Net'
+title: 'GLU-Net [CVPR 2020 - Oral]'
 date: '2020-04-01'
 featured: true
-description: CVPR 2020 - Oral
+description: Dense image matching, optical flow, geometric matching, semantic matching 
 
 links:
     - type: github
       link: https://github.com/PruneTruong/GLU-Net
     - type: youtube
-      link: https://youtube.com/
+      link: https://www.youtube.com/watch?v=xB2gNx8f8Xc&feature=emb_title
     - type: arxiv
       link: https://arxiv.org/abs/1912.05524
 ---
 
-# <div align="center">GLU-Net: Global-Local Universal Network for dense flow and correspondences</div>
-## <div align="center">CVPR 2020 - ORAL</div>
-## <div align="center">Prune Truong, Martin Danelljan, Radu Timofte</div>
 
-<img align="left" src="./preview.gif" alt="Made with Angular" title="Angular" width="30%" hspace="20"/>
-<img align="left" src="./glunet.png" alt="Made with Angular" title="Angular" width="30%" hspace="20"/>
+# <div align="center"><span style="color:MediumBlue">GLU-Net: Global-Local Universal Network for dense flow and correspondences</span></div>
+## <div align="center"><span style="color:Blue">CVPR 2020 - ORAL</span></div>
+#### <div align="center"><span style="color:MediumSlateBlue">Prune Truong &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://martin-danelljan.github.io/"  style="text-decoration: none;color: MediumSlateBlue">Martin Danelljan</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://people.ee.ethz.ch/~timofter/"  style="text-decoration: none;color: MediumSlateBlue">Radu Timofte</a></span></div>
+
+<div align="center">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://arxiv.org/abs/1912.05524"  style="text-decoration: none;color: DarkBlue ">Paper</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://github.com/PruneTruong/GLU-Net"  style="text-decoration: none;color: DarkBlue ">Code</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://drive.google.com/file/d/1pS_OMZ83EG-oalD-30vDa3Ru49GWi-Ky/view?usp=sharing"  style="text-decoration: none;color: DarkBlue ">Poster</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://www.youtube.com/watch?v=xB2gNx8f8Xc&feature=emb_title"  style="text-decoration: none;color: DarkBlue ">Oral Video</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://www.youtube.com/watch?v=s5OUdkM9QLo"  style="text-decoration: none;color: DarkBlue ">Teaser Video</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="GLUNet_slides.pdf" download style="text-decoration: none;color: DarkBlue ">Slides</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+
+
+<hr style="border:0.01px solid LightGray"> </hr>
 
 
 
-<figure inline style="width: 80%">
+<figure inline style="width: 100%">
   <img src="./glunet.png">
   <figcaption>GLU-Net architecture</figcaption>
 </figure>
@@ -37,11 +47,35 @@ The proposed GLU-Net achieves state-of-the-art performance for geometric and sem
 
 
 
+
 ## Visual Results:
 
 * Aligning images of the ETH3D dataset
 
 Here, we warp the source images toward the target image. We compare our GLU-Net to state-of-the-art optical flow method PWC-Net and geometric matching method DGC-Net. 
+
+<div class="flex-row">
+    <figure>
+      <img src="./ETH3D/playground_135_207_158_source.gif">
+      <figcaption>Source images</figcaption>
+    </figure>
+    <figure>
+      <img src="./ETH3D/playground_135_207_158_target.gif">
+      <figcaption>Target image</figcaption>
+    </figure>
+    <figure>
+      <img src="./ETH3D/playground_135_207_158_GLUNet.gif">
+      <figcaption><b>GLU-Net (Ours)</b></figcaption>
+    </figure>
+    <figure>
+      <img src="./ETH3D/playground_135_207_158_PWCNet.gif">
+      <figcaption>PWC-Net</figcaption>
+    </figure>
+    <figure>
+      <img src="./ETH3D/playground_135_207_158_DGCNet.gif">
+      <figcaption>DGC-Net </figcaption>
+    </figure>
+</div>
 
 <div class="flex-row">
     <figure>
@@ -54,7 +88,7 @@ Here, we warp the source images toward the target image. We compare our GLU-Net 
     </figure>
     <figure>
       <img src="./ETH3D/playground_0_40_GLUNet.gif">
-      <figcaption>**GLU-Net (Ours)**</figcaption>
+      <figcaption><b>GLU-Net (Ours)</b></figcaption>
     </figure>
     <figure>
       <img src="./ETH3D/playground_0_40_PWCNet.gif">
@@ -77,7 +111,7 @@ Here, we warp the source images toward the target image. We compare our GLU-Net 
     </figure>
     <figure>
       <img src="./ETH3D/storage_room_2_170_200_GLUNet.gif">
-      <figcaption>**GLU-Net (Ours)**</figcaption>
+      <figcaption><b>GLU-Net (Ours)</b></figcaption>
     </figure>
     <figure>
       <img src="./ETH3D/storage_room_2_170_200_PWCNet.gif">
@@ -101,7 +135,7 @@ Here, we warp the source images toward the target image. We compare our GLU-Net 
     </figure>
     <figure>
       <img src="./ETH3D/tunnel_279_315_295_GLUNet.gif">
-      <figcaption>**GLU-Net (Ours)**</figcaption>
+      <figcaption><b>GLU-Net (Ours)</b></figcaption>
     </figure>
     <figure>
       <img src="./ETH3D/tunnel_279_315_295_PWCNet.gif">
@@ -127,7 +161,7 @@ Here, we warp the source images toward the target image. We compare our GLU-Net 
     </figure>
     <figure>
       <img src="./HP/hp_14_GLUNet.gif">
-      <figcaption>**GLU-Net (Ours)**</figcaption>
+      <figcaption><b>GLU-Net (Ours)</b></figcaption>
     </figure>
     <figure>
       <img src="./HP/hp_14_PWCNet.gif">
@@ -150,7 +184,7 @@ Here, we warp the source images toward the target image. We compare our GLU-Net 
     </figure>
     <figure>
       <img src="./HP/hp_5_GLUNet.gif">
-      <figcaption>**GLU-Net (Ours)**</figcaption>
+      <figcaption><b>GLU-Net (Ours)</b></figcaption>
     </figure>
     <figure>
       <img src="./HP/hp_5_PWCNet.gif">
@@ -168,7 +202,6 @@ Here, we warp the source images toward the target image. We compare our GLU-Net 
 </figure>
 
 
-%`youtube: ltZpqRtuA6A`
 ## How to cite:
 ```
 @inproceedings{GLUNet_Truong_2020,

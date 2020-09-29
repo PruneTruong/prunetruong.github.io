@@ -12,9 +12,6 @@ const Navigation: FC = () => (
     <TLink as={Link} variant="links.secondary" href="#">
       Research
     </TLink>
-    <TLink as={Link} variant="links.secondary" href="#">
-      Resume
-    </TLink>
   </Box>
 );
 

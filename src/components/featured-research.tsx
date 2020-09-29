@@ -45,7 +45,7 @@ const ResearchPost: FC<ResearchPostProps> = ({ post }) => {
   return (
     <UndecoratedLink to={post.frontmatter!.path!}>
       <Box
-        width={250}
+        width={350}
         m={2}
         sx={{
           h1: { fontSize: 1 },
@@ -97,7 +97,7 @@ const FeaturedResearch: FC = () => {
             description
             preview {
               childImageSharp {
-                fixed(width: 250, height: 175) {
+                fixed(width: 348, height: 280) {
                   ...GatsbyImageSharpFixed
                 }
               }

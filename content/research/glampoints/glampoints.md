@@ -1,39 +1,30 @@
 ---
-preview: 
-path: '/research/glu-net'
-title: 'GLAMpoints'
+preview: sift_GLAMpoints_mosaic.png
+path: 'https://www.retinai.com/glampoints'
+title: 'GLAMpoints [ICCV 2019]'
 date: '2019-08-01'
 featured: true
-description: ICCV 2019
+description: Key-point detection, image registration and mosaics, medical data
 
 links:
     - type: github
-      link: https://github.com/PruneTruong/GLU-Net
-    - type: youtube
-      link: https://youtube.com/
+      link: https://github.com/PruneTruong/GLAMpoints_pytorch
     - type: arxiv
-      link: https://arxiv.org/abs/1912.05524
+      link: https://arxiv.org/abs/1908.06812
 ---
-# <div align="center">GLU-Net: Global-Local Universal Network for dense flow and correspondences</div>
-## <div align="center">CVPR 2020 - ORAL</div>
-## <div align="center">Prune Truong, Martin Danelljan, Radu Timofte</div>
-
-
-<img align="left" src="./preview.gif" alt="Made with Angular" title="Angular" width="30%" hspace="20"/>
-<img align="left" src="./glunet.png" alt="Made with Angular" title="Angular" width="30%" hspace="20"/>
+# <div align="center">GLAMpoints: Greedily Learned Accurate Match points</div>
+## <div align="center">ICCV 2019</div>
+## <div align="center">Prune Truong, Stefanos Apostolopoulos, Agata Mosinska, Samuel Stucky, Carlos Ciller, Sandro~De~Zanet</div>
 
 
 
-<figure inline style="width: 80%">
-  <img src="./glunet.png">
-  <figcaption>GLU-Net architecture</figcaption>
+<figure inline style="width: 100%">
+  <img src="./images/method_2.png">
+  <figcaption>a) Training steps for an image pair I_i and I'_i at epoch $i$ created from a particular base image $B$. $I_i$ and $I'_i$ are created by warping B according to homographies $g_i$ and $g'_i$ respectively. $a_i$ and $a'_i$ refer to the additional appearance augmentations applied to each image. b) Loss computation corresponding to situation a. c) Schematic representation of Unet-4</figcaption>
 </figure>
 
 ## Abstract
-Establishing dense correspondences between a pair of images is an important and general problem, covering geometric matching, optical flow and semantic correspondences. While these applications share fundamental challenges, such as large displacements, pixel-accuracy, and appearance changes, they are currently addressed with specialized network architectures, designed for only one particular task. This severely limits the generalization capabilities of such networks to new scenarios, where e.g. robustness to larger displacements or higher accuracy is required.
-
-In this work, we propose a universal network architecture that is directly applicable to all the aforementioned dense correspondence problems. We achieve both high accuracy and robustness to large displacements by investigating the combined use of global and local correlation layers. We further propose an adaptive resolution strategy, allowing our network to operate on virtually any input image resolution.
-The proposed GLU-Net achieves state-of-the-art performance for geometric and semantic matching as well as optical flow, when using the same network and weights. Code and trained models are available [here](https://github.com/PruneTruong/GLU-Net).
+We introduce a novel CNN-based feature point detector - \ac{GLAMpoints} - learned in a semi-supervised manner. Our detector extracts repeatable, stable interest points with a dense coverage, specifically designed to maximize the correct matching in a specific domain, which is in contrast to conventional techniques that optimize indirect metrics. In this paper, we apply our method on challenging retinal slitlamp images, for which classical detectors yield unsatisfactory results due to low image quality and insufficient amount of low-level features. We show that GLAMpoints significantly outperforms classical detectors as well as state-of-the-art CNN-based methods in matching and registration quality for retinal images. Our method can also be extended to other domains, such as natural images. Training code and model weights are available [here](https://github.com/PruneTruong/GLAMpoints_pytorch).
 
 
 
@@ -66,118 +57,15 @@ Here, we warp the source images toward the target image. We compare our GLU-Net 
     </figure>
 </div>
 
-<div class="flex-row">
-    <figure>
-      <img src="./ETH3D/storage_room_2_170_200_source.gif">
-      <figcaption>Source images</figcaption>
-    </figure>
-    <figure>
-      <img src="./ETH3D/storage_room_2_170_200_target.gif">
-      <figcaption>Target image</figcaption>
-    </figure>
-    <figure>
-      <img src="./ETH3D/storage_room_2_170_200_GLUNet.gif">
-      <figcaption>**GLU-Net (Ours)**</figcaption>
-    </figure>
-    <figure>
-      <img src="./ETH3D/storage_room_2_170_200_PWCNet.gif">
-      <figcaption>PWC-Net</figcaption>
-    </figure>
-    <figure>
-      <img src="./ETH3D/storage_room_2_170_200_DGCNet.gif">
-      <figcaption>DGC-Net </figcaption>
-    </figure>
-</div>
 
-
-<div class="flex-row">
-    <figure>
-      <img src="./ETH3D/tunnel_279_315_295_source.gif">
-      <figcaption>Source images</figcaption>
-    </figure>
-    <figure>
-      <img src="./ETH3D/tunnel_279_315_295_target.gif">
-      <figcaption>Target image</figcaption>
-    </figure>
-    <figure>
-      <img src="./ETH3D/tunnel_279_315_295_GLUNet.gif">
-      <figcaption>**GLU-Net (Ours)**</figcaption>
-    </figure>
-    <figure>
-      <img src="./ETH3D/tunnel_279_315_295_PWCNet.gif">
-      <figcaption>PWC-Net</figcaption>
-    </figure>
-    <figure>
-      <img src="./ETH3D/tunnel_279_315_295_DGCNet.gif">
-      <figcaption>DGC-Net </figcaption>
-    </figure>
-</div>
-
-* Aligning images of the HPatches dataset (homography dataset)
-
-
-<div class="flex-row">
-    <figure>
-      <img src="./HP/hp_14_source.gif">
-      <figcaption>Source images</figcaption>
-    </figure>
-    <figure>
-      <img src="./HP/hp_14_target.gif">
-      <figcaption>Target image</figcaption>
-    </figure>
-    <figure>
-      <img src="./HP/hp_14_GLUNet.gif">
-      <figcaption>**GLU-Net (Ours)**</figcaption>
-    </figure>
-    <figure>
-      <img src="./HP/hp_14_PWCNet.gif">
-      <figcaption>PWC-Net</figcaption>
-    </figure>
-    <figure>
-      <img src="./HP/hp_14_DGCNet.gif">
-      <figcaption>DGC-Net </figcaption>
-    </figure>
-</div>
-
-<div class="flex-row">
-    <figure>
-      <img src="./HP/hp_5_source.gif">
-      <figcaption>Source images</figcaption>
-    </figure>
-    <figure>
-      <img src="./HP/hp_5_target.gif">
-      <figcaption>Target image</figcaption>
-    </figure>
-    <figure>
-      <img src="./HP/hp_5_GLUNet.gif">
-      <figcaption>**GLU-Net (Ours)**</figcaption>
-    </figure>
-    <figure>
-      <img src="./HP/hp_5_PWCNet.gif">
-      <figcaption>PWC-Net</figcaption>
-    </figure>
-    <figure>
-      <img src="./HP/hp_5_DGCNet.gif">
-      <figcaption>DGC-Net </figcaption>
-    </figure>
-</div>
-* Aligning images of the semantic matching dataset TSS
-
-<figure>
-  <img src="./TSS-more.jpg">
-</figure>
-
-
-%`youtube: ltZpqRtuA6A`
 ## How to cite:
 ```
-@inproceedings{GLUNet_Truong_2020,
-      title = {{GLU-Net}: Global-Local Universal Network for dense flow and correspondences},
-      author    = {Prune Truong and
-                   Martin Danelljan and
-                   Radu Timofte},
-      year = {2020},
-      booktitle = {2020 {IEEE} Conference on Computer Vision and Pattern Recognition, {CVPR} 2020}
+@inproceedings{Truong2019GLAMpoints,
+		  title={GLAMpoints: Greedily Learned Accurate Match Points},
+		  author={Prune Truong and Stefanos Apostolopoulos and Agata Mosinska and Samuel Stucky and Carlos Ciller and Sandro De Zanet},
+		  journal={2019 IEEE/CVF International Conference on Computer Vision (ICCV)},
+		  year={2019},
+		  pages={10731-10740}
 }
 ```
 
