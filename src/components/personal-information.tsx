@@ -23,7 +23,7 @@ export const PersonalInformation: FC = () => {
     query PersonalInformationQuery {
       avatar: file(relativePath: { eq: "avatar-square.jpg" }) {
         childImageSharp {
-          fixed(width: 175, height: 175) {
+          fixed(width: 250, height: 250) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -61,7 +61,7 @@ export const PersonalInformation: FC = () => {
           </Text>
         </Box>
       </Box>
-      <Box m={2} flex="0 0 175px">
+      <Box m={2} flex="0 0 250px">
         <Avatar
           fixed={avatar?.childImageSharp?.fixed!}
           objectFit="cover"

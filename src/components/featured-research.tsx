@@ -8,6 +8,7 @@ import React, { FC } from 'react';
 import truncateText from '../utils/truncate-text';
 import { Box, Flex, Heading, Text } from 'rebass';
 import Img from 'gatsby-image';
+import ResearchLinks from './research-links';
 
 const DESCRIPTION_MAX_LENGTH = 300;
 
@@ -23,6 +24,17 @@ const UndecoratedLink = styled(Link)`
   }
 `;
 
+const StyledResearchLinks = styled(ResearchLinks)`
+  display: flex;
+  justify-content: space-around;
+  a > svg {
+    transition: 0.3s ease-in-out;
+  }
+  a:hover > svg {
+    fill: ${props => props.theme.colors.primary};
+  }
+`;
+
 const ResearchPost: FC<ResearchPostProps> = ({ post }) => {
   const renderDescription = () => {
     if (post.frontmatter?.description)
@@ -33,7 +45,7 @@ const ResearchPost: FC<ResearchPostProps> = ({ post }) => {
   return (
     <UndecoratedLink to={post.frontmatter!.path!}>
       <Box
-        width={250}
+        width={350}
         m={2}
         sx={{
           h1: { fontSize: 1 },
@@ -55,6 +67,9 @@ const ResearchPost: FC<ResearchPostProps> = ({ post }) => {
           <Text as="p" variant="justified" fontSize={1} px={2} pb={2}>
             {renderDescription()}
           </Text>
+
+          {post.frontmatter?.links && <StyledResearchLinks links={post.frontmatter.links} />}
+
         </section>
       </Box>
     </UndecoratedLink>
@@ -82,10 +97,14 @@ const FeaturedResearch: FC = () => {
             description
             preview {
               childImageSharp {
-                fixed(width: 250, height: 175) {
+                fixed(width: 348, height: 280) {
                   ...GatsbyImageSharpFixed
                 }
               }
+            }
+            links {
+                type
+                link
             }
           }
           excerpt
@@ -96,16 +115,14 @@ const FeaturedResearch: FC = () => {
   `);
 
   return (
-    <>
+    <React.Fragment>
       <Heading as={'h2'}>Research</Heading>
       <Flex ml={4} my={2} justifyContent="space-around" flexWrap="wrap">
-        {Array(6)
-          .fill(nodes[0], 0, 6)
-          .map(node => (
-            <ResearchPost key={node.id} post={node} />
-          ))}
+        {nodes.map(node => (
+          <ResearchPost key={node.id} post={node} />
+        ))}
       </Flex>
-    </>
+    </React.Fragment>
   );
 };
 

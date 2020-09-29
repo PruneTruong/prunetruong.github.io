@@ -6,22 +6,27 @@ import SEO from '../components/seo';
 import { Heading } from 'rebass';
 import { graphql } from 'gatsby';
 import styled from '@emotion/styled';
+import ResearchLinks from '../components/research-links';
 
 const katex = require(`katex/dist/katex.min.css`);
 
 export const pageQuery = graphql`
-  query BlogPostByPath($path: String!) {
-    post: markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
-      frontmatter {
-        date(formatString: "YYYY-MM-DD")
-        path
-        title
-      }
-      timeToRead
-      excerpt
+    query BlogPostByPath($path: String!) {
+        post: markdownRemark(frontmatter: { path: { eq: $path } }) {
+            html
+            frontmatter {
+                date(formatString: "YYYY-MM-DD")
+                path
+                title
+                links {
+                    type
+                    link
+                }
+            }
+            timeToRead
+            excerpt
+        }
     }
-  }
 `;
 
 interface ResearchArticleProps {
@@ -31,6 +36,7 @@ interface ResearchArticleProps {
         title: string;
         date: string;
         description?: string;
+        links: Array<{type: string, link: string}>
       };
       html: string;
       excerpt: string;
@@ -39,36 +45,42 @@ interface ResearchArticleProps {
   };
 }
 
+const StyledResearchLinks = styled(ResearchLinks)`
+  display: flex;
+  justify-content: space-around;
+  a > svg {
+    transition: 0.3s ease-in-out;
+  }
+  a:hover > svg {
+    fill: ${props => props.theme.colors.primary};
+  }
+`;
+
+
 const px = [`16px`, `8px`, `4px`];
 const shadow = px.map(v => `rgba(0, 0, 0, 0.10) 0px ${v} ${v} 0px`);
 
 const Research: FC<ResearchArticleProps> = ({ data: { post } }) => (
   <Layout>
-    <SEO
-      title={post.frontmatter.title}
-      description={post.frontmatter.description}
-    />
-    <Heading variant="styles.h2">{post.frontmatter.title}</Heading>
-    <p
-      sx={{
-        color: `secondary`,
-        mt: 3,
-        a: { color: `secondary` },
-        fontSize: [1, 1, 2],
-      }}
-    >
-      <time>{post.frontmatter.date}</time>
-      {post.timeToRead && ` — `}
-      {post.timeToRead && <span>{post.timeToRead} min read</span>}
-    </p>
     <section
       sx={{
-        my: 5,
+        my: 3,
         '.gatsby-resp-image-wrapper': {
-          my: [4, 4, 5],
-          boxShadow: shadow.join(`, `),
+          my: [0, 0, 3],
         },
-        figcaption: { mt: -4, textAlign: 'center', fontStyle: 'italic' },
+        figure: {
+          '&[inline]': {
+            display: 'inline-block',
+          },
+          img: {
+            width: '100%',
+          },
+          '.gatsby-resp-image-wrapper': {
+            mb: 2,
+          },
+          figcaption: { textAlign: 'center', fontStyle: 'italic' },
+          mx: 0,
+        },
         p: { fontSize: 2 },
         h1: { fontSize: 6 },
         h2: { fontSize: 5 },
@@ -83,8 +95,14 @@ const Research: FC<ResearchArticleProps> = ({ data: { post } }) => (
           fontFamily: 'monospace',
         },
         variant: `layout.content`,
+        '.flex-row': {
+          display: 'flex',
+        }
       }}
     >
+      <header>
+        {post.frontmatter?.links && <StyledResearchLinks links={post.frontmatter.links} size={46} />}
+      </header>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </section>
   </Layout>
