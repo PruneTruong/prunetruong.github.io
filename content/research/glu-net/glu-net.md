@@ -50,7 +50,7 @@ The proposed GLU-Net achieves state-of-the-art performance for geometric and sem
 
 ## Visual Results:
 
-* Aligning images of the ETH3D dataset
+* #### Aligning images of the ETH3D dataset
 
 Here, we warp the source images toward the target image. We compare our GLU-Net to state-of-the-art optical flow method PWC-Net and geometric matching method DGC-Net. 
 
@@ -147,7 +147,7 @@ Here, we warp the source images toward the target image. We compare our GLU-Net 
     </figure>
 </div>
 
-* Aligning images of the HPatches dataset (homography dataset)
+* #### Aligning images of the HPatches dataset (homography dataset)
 
 
 <div class="flex-row">
@@ -195,7 +195,8 @@ Here, we warp the source images toward the target image. We compare our GLU-Net 
       <figcaption>DGC-Net </figcaption>
     </figure>
 </div>
-* Aligning images of the semantic matching dataset TSS
+
+* #### Aligning images of the semantic matching dataset TSS
 
 <figure>
   <img src="./TSS-more.jpg">

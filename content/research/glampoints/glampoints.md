@@ -43,7 +43,8 @@ We introduce a novel CNN-based feature point detector - **GLAMpoints** - learned
 ```
 @inproceedings{Truong2019GLAMpoints,
 		  title={GLAMpoints: Greedily Learned Accurate Match Points},
-		  author={Prune Truong and Stefanos Apostolopoulos and Agata Mosinska and Samuel Stucky and Carlos Ciller and Sandro De Zanet},
+		  author={Prune Truong and Stefanos Apostolopoulos and Agata Mosinska and 
+		          Samuel Stucky and Carlos Ciller and Sandro De Zanet},
 		  journal={2019 IEEE/CVF International Conference on Computer Vision (ICCV)},
 		  year={2019},
 		  pages={10731-10740}
