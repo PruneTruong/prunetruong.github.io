@@ -33,7 +33,6 @@ links:
 <hr style="border:0.01px solid LightGray"> </hr>
 
 
-
 <figure inline style="width: 100%">
   <img src="./glunet.png">
   <figcaption>GLU-Net architecture</figcaption>

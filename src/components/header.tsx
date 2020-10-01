@@ -4,7 +4,7 @@ import React, { FC } from 'react';
 import { Box, Flex, Heading, Link as TLink } from 'rebass';
 import useSiteMetadata from '../hooks/use-site-metadata';
 import { Link } from 'gatsby';
-import { Github, Linkedin, Twitter } from '@icons-pack/react-simple-icons';
+import { Github, Linkedin, Twitter, Gmail, Googlescholar } from '@icons-pack/react-simple-icons';
 import theme from '../gatsby-plugin-theme-ui';
 
 const Navigation: FC = () => (
@@ -19,6 +19,8 @@ const ExternalLinks: FC = () => {
   return (<div sx={{
       '> a': {mx: 3}
     }}>
+    {social.twitter && <a href="mailto: prune.truong@vision.ee.ethz.ch"><Gmail color={theme.colors.secondary} size={32} /></a>}
+    {social.twitter && <a href="https://scholar.google.com/citations?user=v8VCED0AAAAJ&hl=fr"><Googlescholar color={theme.colors.secondary} size={32} /></a>}
     {social.twitter && <a href={social.twitter}><Twitter color={theme.colors.secondary} size={32} /></a>}
     {social.linkedin && <a href={social.linkedin}><Linkedin color={theme.colors.secondary} size={32} /></a>}
     {social.github && <a href={social.github}><Github color={theme.colors.secondary} size={32} /></a>}

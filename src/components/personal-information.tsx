@@ -50,11 +50,18 @@ export const PersonalInformation: FC = () => {
             <Link href="https://ethz.ch/en.html">ETH Zurich</Link>
           </Heading>
           <Text variant="description" fontSize={2}>
-            From May 2020, I am a PhD student under the supervision of{' '}
+            Since May 2020, I am a PhD student under the supervision of{' '}
             <Link href="https://vision.ee.ethz.ch/people-details.OTAyMzM=.TGlzdC8zMjQ4LC0xOTcxNDY1MTc4.html">
               Prof. Luc Van Gool
             </Link>
-            . Previously, I obtained a Master’s degree in Mechanical Engineering
+            . I am also advised by {' '}
+            <Link href="https://martin-danelljan.github.io/">
+              Dr. Martin Danelljan
+            </Link> and {' '}
+            <Link href="https://ee.ethz.ch/the-department/people-a-z/person-detail.MjAxNjc4.TGlzdC8zMjc5LC0xNjUwNTg5ODIw.html">
+              Dr. Radu Timofte
+            </Link>. My main research interests are Computer Vision and its applications, especially in the task of image matching. 
+	    Previously, I obtained a Master’s degree in Mechanical Engineering
             with honors at ETH Zurich. I also conducted an internship at{' '}
             <Link href="https://www.retinai.com/">RetinAI</Link> focused on
             computer vision applied to medical images.
