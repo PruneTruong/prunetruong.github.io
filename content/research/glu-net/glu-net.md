@@ -65,7 +65,7 @@ Here, we warp the source images toward the target image. We compare our GLU-Net 
     </figure>
     <figure>
       <img src="./ETH3D/playground_135_207_158_GLUNet.gif">
-      <figcaption><b>GLU-Net (Ours)</b></figcaption>
+      <figcaption><span style="red"><b style='red'>GLU-Net (Ours)</b></span></figcaption>
     </figure>
     <figure>
       <img src="./ETH3D/playground_135_207_158_PWCNet.gif">
@@ -195,6 +195,102 @@ Here, we warp the source images toward the target image. We compare our GLU-Net 
       <figcaption>DGC-Net </figcaption>
     </figure>
 </div>
+
+<div class="flex-row">
+    <figure>
+      <img src="./HP/hp_7_source.gif">
+      <figcaption>Source images</figcaption>
+    </figure>
+    <figure>
+      <img src="./HP/hp_7_target.gif">
+      <figcaption>Target image</figcaption>
+    </figure>
+    <figure>
+      <img src="./HP/hp_7_GLUNet.gif">
+      <figcaption><b>GLU-Net (Ours)</b></figcaption>
+    </figure>
+    <figure>
+      <img src="./HP/hp_7_PWCNet.gif">
+      <figcaption>PWC-Net</figcaption>
+    </figure>
+    <figure>
+      <img src="./HP/hp_7_DGCNet.gif">
+      <figcaption>DGC-Net </figcaption>
+    </figure>
+</div>
+
+
+<div class="flex-row">
+    <figure>
+      <img src="./HP/hp_15_source.gif">
+      <figcaption>Source images</figcaption>
+    </figure>
+    <figure>
+      <img src="./HP/hp_15_target.gif">
+      <figcaption>Target image</figcaption>
+    </figure>
+    <figure>
+      <img src="./HP/hp_15_GLUNet.gif">
+      <figcaption><b>GLU-Net (Ours)</b></figcaption>
+    </figure>
+    <figure>
+      <img src="./HP/hp_15_PWCNet.gif">
+      <figcaption>PWC-Net</figcaption>
+    </figure>
+    <figure>
+      <img src="./HP/hp_15_DGCNet.gif">
+      <figcaption>DGC-Net </figcaption>
+    </figure>
+</div>
+
+
+<div class="flex-row">
+    <figure>
+      <img src="./HP/hp_58_source.gif">
+      <figcaption>Source images</figcaption>
+    </figure>
+    <figure>
+      <img src="./HP/hp_58_target.gif">
+      <figcaption>Target image</figcaption>
+    </figure>
+    <figure>
+      <img src="./HP/hp_58_GLUNet.gif">
+      <figcaption><b>GLU-Net (Ours)</b></figcaption>
+    </figure>
+    <figure>
+      <img src="./HP/hp_58_PWCNet.gif">
+      <figcaption>PWC-Net</figcaption>
+    </figure>
+    <figure>
+      <img src="./HP/hp_58_DGCNet.gif">
+      <figcaption>DGC-Net </figcaption>
+    </figure>
+</div>
+
+
+<div class="flex-row">
+    <figure>
+      <img src="./HP/hp_51_source.gif">
+      <figcaption>Source images</figcaption>
+    </figure>
+    <figure>
+      <img src="./HP/hp_51_target.gif">
+      <figcaption>Target image</figcaption>
+    </figure>
+    <figure>
+      <img src="./HP/hp_51_GLUNet.gif">
+      <figcaption><b>GLU-Net (Ours)</b></figcaption>
+    </figure>
+    <figure>
+      <img src="./HP/hp_51_PWCNet.gif">
+      <figcaption>PWC-Net</figcaption>
+    </figure>
+    <figure>
+      <img src="./HP/hp_51_DGCNet.gif">
+      <figcaption>DGC-Net </figcaption>
+    </figure>
+</div>
+
 
 * #### Aligning images of the semantic matching dataset TSS
 
