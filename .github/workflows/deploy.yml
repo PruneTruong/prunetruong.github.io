@@ -27,10 +27,11 @@ jobs:
         
       - name: Install and Build 🔧
         env:
-          GH_PAGES_PREFIX: /${{github.event.repository.name}}
+          GH_PAGES_PREFIX: /
         run: |
           yarn install
           yarn build
+          cp CNAME public/
         
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.6.1
