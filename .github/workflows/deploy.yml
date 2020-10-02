@@ -31,6 +31,7 @@ jobs:
         run: |
           yarn install
           yarn build
+          cp CNAME public/
         
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.6.1
