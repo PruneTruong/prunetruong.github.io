@@ -43,20 +43,20 @@ const ResearchPost: FC<ResearchPostProps> = ({ post }) => {
   };
 
   return (
-    <UndecoratedLink to={post.frontmatter!.path!}>
-      <Box
-        width={350}
-        m={2}
-        sx={{
-          h1: { fontSize: 1 },
-          boxShadow: '2px 4px 8px 0 rgba(0,0,0,0.2);',
-          transition: '0.2s ease-in-out',
-          ':hover': {
-            boxShadow: '2px 4px 16px 0 rgba(0, 0, 0, 0.25)',
-          },
-          overflow: 'hidden',
-        }}
-      >
+    <Box
+      width={350}
+      m={2}
+      sx={{
+        h1: { fontSize: 1 },
+        boxShadow: '2px 4px 8px 0 rgba(0,0,0,0.2);',
+        transition: '0.2s ease-in-out',
+        ':hover': {
+          boxShadow: '2px 4px 16px 0 rgba(0, 0, 0, 0.25)',
+        },
+        overflow: 'hidden',
+      }}
+    >
+      <UndecoratedLink to={post.frontmatter!.path!}>
         <header>
           <Img fixed={post.frontmatter!.preview?.childImageSharp?.fixed!} />
           <Heading as="h3" fontSize={2} my={1} px={2}>
@@ -67,12 +67,12 @@ const ResearchPost: FC<ResearchPostProps> = ({ post }) => {
           <Text as="p" variant="justified" fontSize={1} px={2} pb={2}>
             {renderDescription()}
           </Text>
-
-          {post.frontmatter?.links && <StyledResearchLinks links={post.frontmatter.links} />}
-
         </section>
-      </Box>
-    </UndecoratedLink>
+      </UndecoratedLink>
+      <footer>
+        {post.frontmatter?.links && <StyledResearchLinks links={post.frontmatter.links} />}
+      </footer>
+    </Box>
   );
 };
 
