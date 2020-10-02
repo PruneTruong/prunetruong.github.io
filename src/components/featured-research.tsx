@@ -103,8 +103,8 @@ const FeaturedResearch: FC = () => {
               }
             }
             links {
-                type
-                link
+              type
+              link
             }
           }
           excerpt

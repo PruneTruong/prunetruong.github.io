@@ -51,7 +51,7 @@ We analyze our GOCor module in extensive ablative experiments. When integrated i
 
 Here, we warp the source images toward the target image. We compare our GLU-Net-GOCor with original network GLU-Net. 
 
-<figure inline style="width: 1250px">
+<figure inline style="width: 100%">
   <img src="./images/megadepth_glunet.jpg">
 </figure>
 
