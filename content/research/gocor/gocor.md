@@ -62,14 +62,14 @@ Here, we warp the query image toward the reference image. We compare our GLU-Net
 
 Here, we warp the query image toward the reference image. We compare our GLU-Net to state-of-the-art optical flow method PWC-Net and geometric matching method DGC-Net. 
 
-<figure inline style="width: 100%">
+<figure style="min-width: 100%; height: auto">
   <img src="./images/ETH3D_visual_glunet.jpg">
 </figure>
 
 * #### Aligning images of the KITTI dataset (optical flow dataset)
 
 
-<figure inline style="width: 100%">
+<figure inline style="max-width: 100%;display: block;height: auto; float: left; width: 100%;">
   <img src="./images/kitti-pwcnet.jpg">
 </figure>
 
