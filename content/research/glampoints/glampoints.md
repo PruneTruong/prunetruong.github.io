@@ -7,10 +7,10 @@ featured: true
 description: Key-point detection, image registration and mosaics, medical data
 
 links:
-    - type: github
-      link: https://github.com/PruneTruong/GLAMpoints_pytorch
     - type: arxiv
       link: https://arxiv.org/abs/1908.06812
+    - type: github
+      link: https://github.com/PruneTruong/GLAMpoints_pytorch
 ---
 
 
@@ -20,14 +20,12 @@ links:
 
 <hr style="border:0.01px solid LightGray"> </hr>
 
-<div align="center">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://arxiv.org/abs/1908.06812"  style="text-decoration: none;color: DarkBlue "><b>Paper</b></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://github.com/PruneTruong/GLAMpoints_pytorch"  style="text-decoration: none;color: DarkBlue "><b>Code</b></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://drive.google.com/file/d/1706DRoMCr7adBnxws1iLcwUfJ1ClEant/view?usp=sharing"  style="text-decoration: none;color: DarkBlue "><b>Poster</b></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://www.retinai.com/glampoints"  style="text-decoration: none;color: DarkBlue "><b>Detailed Webpage</b></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div style="display: flex;justify-content: space-around;width:100%">
+	<div><a href="https://arxiv.org/abs/1908.06812"  style="text-decoration: none;color: DarkBlue "><b>Paper</b></a></div>
+	<div><a href="https://github.com/PruneTruong/GLAMpoints_pytorch"  style="text-decoration: none;color: DarkBlue "><b>Code</b></a></div>
+	<div><a href="https://drive.google.com/file/d/1706DRoMCr7adBnxws1iLcwUfJ1ClEant/view?usp=sharing"  style="text-decoration: none;color: DarkBlue "><b>Poster</b></a></div>
+	<div><a href="https://www.retinai.com/glampoints"  style="text-decoration: none;color: DarkBlue "><b>Detailed Webpage</b></a></div>
 </div>
-
 
 <hr style="border:0.01px solid LightGray"> </hr>
 

@@ -7,12 +7,12 @@ featured: true
 description: Dense image matching, optical flow, geometric matching, semantic matching 
 
 links:
+    - type: arxiv
+      link: https://arxiv.org/abs/1912.05524
     - type: github
       link: https://github.com/PruneTruong/GLU-Net
     - type: youtube
       link: https://www.youtube.com/watch?v=xB2gNx8f8Xc&feature=emb_title
-    - type: arxiv
-      link: https://arxiv.org/abs/1912.05524
 ---
 
 
@@ -22,15 +22,14 @@ links:
 
 <hr style="border:0.01px solid LightGray"> </hr>
 
-<div align="center">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://arxiv.org/abs/1912.05524"  style="text-decoration: none;color: DarkBlue "><b>Paper</b></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://github.com/PruneTruong/GLU-Net"  style="text-decoration: none;color: DarkBlue "><b>Code</b></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://drive.google.com/file/d/1pS_OMZ83EG-oalD-30vDa3Ru49GWi-Ky/view?usp=sharing"  style="text-decoration: none;color: DarkBlue "><b>Poster</b></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://www.youtube.com/watch?v=xB2gNx8f8Xc&feature=emb_title"  style="text-decoration: none;color: DarkBlue "><b>Oral Video</b></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://www.youtube.com/watch?v=s5OUdkM9QLo"  style="text-decoration: none;color: DarkBlue "><b>Teaser Video</b></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://drive.google.com/file/d/1BE-X58V7DTPoJwxPkfCyPNb1WISauwqK/view?usp=sharing" style="text-decoration: none;color: DarkBlue "><b>Slides</b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-
+<div style="display: flex;justify-content: space-around;width:100%">
+	<div><a href="https://arxiv.org/abs/1912.05524"  style="text-decoration: none;color: DarkBlue "><b>Paper</b></a></div>
+	<div><a href="https://github.com/PruneTruong/GLU-Net"  style="text-decoration: none;color: DarkBlue "><b>Code</b></a></div>
+	<div><a href="https://drive.google.com/file/d/1pS_OMZ83EG-oalD-30vDa3Ru49GWi-Ky/view?usp=sharing"  style="text-decoration: none;color: DarkBlue "><b>Poster</b></a></div>
+	<div><a href="https://www.youtube.com/watch?v=xB2gNx8f8Xc&feature=emb_title"  style="text-decoration: none;color: DarkBlue "><b>Oral Video</b></a></div>
+	<div><a href="https://www.youtube.com/watch?v=s5OUdkM9QLo"  style="text-decoration: none;color: DarkBlue "><b>Teaser Video</b></a></div>
+	<div><a href="https://drive.google.com/file/d/1BE-X58V7DTPoJwxPkfCyPNb1WISauwqK/view?usp=sharing" style="text-decoration: none;color: DarkBlue "><b>Slides</b></a></div>
+</div>
 
 <hr style="border:0.01px solid LightGray"> </hr>
 

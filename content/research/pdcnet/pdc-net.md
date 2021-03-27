@@ -7,29 +7,30 @@ featured: true
 description: Dense image matching, confidence estimation, probabilistic model
 
 links:
-    - type: github
-      link: https://github.com/PruneTruong/PDCNet
     - type: arxiv
       link: https://arxiv.org/abs/2101.01710
+    - type: github
+      link: https://github.com/PruneTruong/PDCNet
 ---
 
 
 # <div align="center"><span style="color:MediumBlue">Learning Accurate Dense Correspondences and When to Trust Them</span></div>
 ## <div align="center"><span style="color:Blue">CVPR 2021 - ORAL</span></div>
-#### <div align="center"><span style="color:MediumSlateBlue" >Prune Truong &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://martin-danelljan.github.io/"  style="text-decoration: none;color: MediumSlateBlue">Martin Danelljan</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ee.ethz.ch/the-department/faculty/professors/person-detail.OTAyMzM=.TGlzdC80MTEsMTA1ODA0MjU5.html"  style="text-decoration: none;color: MediumSlateBlue">Luc Van Gool</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://people.ee.ethz.ch/~timofter/"  style="text-decoration: none;color: MediumSlateBlue">Radu Timofte</a></span></div>
+###<div align="center"><span style="color:MediumSlateBlue" >Prune Truong &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://martin-danelljan.github.io/"  style="text-decoration: none;color: MediumSlateBlue">Martin Danelljan</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ee.ethz.ch/the-department/faculty/professors/person-detail.OTAyMzM=.TGlzdC80MTEsMTA1ODA0MjU5.html"  style="text-decoration: none;color: MediumSlateBlue">Luc Van Gool</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://people.ee.ethz.ch/~timofter/"  style="text-decoration: none;color: MediumSlateBlue">Radu Timofte</a></span></div>
 
 <hr style="border:0.01px solid LightGray"> </hr>
 
-<div align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://arxiv.org/abs/2101.01710"  style="text-decoration: none;color: DarkBlue;"><b>Paper</b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/PruneTruong/PDCNet" style="text-decoration: none;color: DarkBlue;"><b>Code</b></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div style="display: flex;justify-content: space-around;width:100%">
+	<div><a href="https://arxiv.org/abs/2101.01710"  style="text-decoration: none;color: DarkBlue;"><b>Paper</b></a></div>
+	<div><a href="https://github.com/PruneTruong/PDCNet" style="text-decoration: none;color: DarkBlue;"><b>Code</b></a></div>
 </div>
-
 
 <hr style="border:0.01px solid LightGray"> </hr>
 
 
 <figure inline style="width: 100%">
   <img src="./images/intro.png">
-  <figcaption>Estimating dense correspondences between the query (a) and the reference (b) image. The query is warped according to the resulting flows (c)-(d).
+  <figcaption style="text-align: center">Estimating dense correspondences between the query (a) and the reference (b) image. The query is warped according to the resulting flows (c)-(d).
 The baseline (c) does not estimate an uncertainty map and is therefore unable to filter the inaccurate flows at, for example occluded and homogeneous regions. In contrast, our PDC-Net (d) not only estimates accurate correspondences, but also when to trust them. It predicts a robust uncertainty map that identifies accurate matches and excludes incorrect and unmatched pixels (red).</figcaption>
 </figure>
 
@@ -47,73 +48,31 @@ In this work, we aim to estimate a dense flow field relating two images, coupled
 
 Here, we warp the query images toward the reference images. Our approch PDC-Net also predicts a confidence mask along with the dense correspondences. We show the warped query only in the estimated confident regions. 
 
-<div class="flex-row">
-    <figure>
-      <img src="./video_achen/aachen_query.gif">
-      <figcaption>Query images</figcaption>
-    </figure>
-    <figure>
-      <img src="./video_achen/aachen_reference.gif">
-      <figcaption>Reference images</figcaption>
-    </figure>
-    <figure>
-      <img src="./video_achen/aachen_warped.gif">
-      <figcaption><span style="red"><b style='red'>PDC-Net (Ours)</b></span></figcaption>
-    </figure>
-</div>
-
+<figure>
+<img src="./video_texture_transfer/aachen_concatenated.gif">
+<figcaption style="display: flex;justify-content: space-around;width:100%"> <div>Query</div> <div>Reference</div> <div><b>PDC-Net</b></div></figcaption>
+</figure>
 
 
 * #### Texture transfer
 
+<figure>
+<img src="./video_texture_transfer/concatenated.gif">
+<figcaption style="display: flex;justify-content: space-around;width:100%"> <div>Query</div> <div>Reference</div> <div><b>PDC-Net</b></div></figcaption>
+</figure>
 
-
-<div class="flex-row">
-    <figure>
-      <img src="./video_texture_transfer/source.gif">
-      <figcaption>Query images</figcaption>
-    </figure>
-    <figure>
-      <img src="./video_texture_transfer/target.gif">
-      <figcaption>Reference images</figcaption>
-    </figure>
-    <figure>
-      <img src="./video_texture_transfer/warped_overlaid_target.gif">
-      <figcaption><span style="red"><b style='red'>PDC-Net (Ours)</b></span></figcaption>
-    </figure>
-</div>
 
 or with larger appearance transformations...
 
-<div class="flex-row">
-    <figure>
-      <img src="./video_texture_transfer/color/source.gif">
-      <figcaption>Query images</figcaption>
-    </figure>
-    <figure>
-      <img src="./video_texture_transfer/color/target.gif">
-      <figcaption>Reference images</figcaption>
-    </figure>
-    <figure>
-      <img src="./video_texture_transfer/color/warped_overlaid_target.gif">
-      <figcaption><span style="red"><b style='red'>PDC-Net (Ours)</b></span></figcaption>
-    </figure>
-</div>
+<figure>
+<img src="./video_texture_transfer/color/concatenated.gif">
+<figcaption style="display: flex;justify-content: space-around;width:100%"> <div>Query</div> <div>Reference</div> <div><b>PDC-Net</b></div></figcaption>
+</figure>
 
-<div class="flex-row">
-    <figure>
-      <img src="./video_texture_transfer/temple/source.gif">
-      <figcaption>Query images</figcaption>
-    </figure>
-    <figure>
-      <img src="./video_texture_transfer/temple/target.gif">
-      <figcaption>Reference images</figcaption>
-    </figure>
-    <figure>
-      <img src="./video_texture_transfer/temple/warped_overlaid_target.gif">
-      <figcaption><span style="red"><b style='red'>PDC-Net (Ours)</b></span></figcaption>
-    </figure>
-</div>
+<figure>
+<img src="./video_texture_transfer/temple/concatenated.gif">
+<figcaption style="display: flex;justify-content: space-around;width:100%"> <div>Query</div> <div>Reference</div> <div><b>PDC-Net</b></div></figcaption>
+</figure>
 
 
 * #### Aligning images of KITTI-2015

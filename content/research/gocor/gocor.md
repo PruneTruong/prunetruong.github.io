@@ -7,12 +7,12 @@ featured: true
 description: Feature correlation layer, online optimization, novel correlation layer, dense matching 
 
 links:
+    - type: arxiv
+      link: https://arxiv.org/abs/2009.07823
     - type: github
       link: https://github.com/PruneTruong/GOCor
     - type: youtube
       link: https://www.youtube.com/watch?v=V22MyFChBCs&feature=youtu.be
-    - type: arxiv
-      link: https://arxiv.org/abs/2009.07823
 ---
 
 # <div align="center"><span style="color:MediumBlue">GOCor: Bringing Globally Optimized Correspondence Volumes into Your Neural Network</span></div>
@@ -22,15 +22,19 @@ links:
 
 <hr style="border:0.01px solid LightGray"> </hr>
 
-<div align="center"><a href="https://arxiv.org/abs/2009.07823"  style="text-decoration: none;color: DarkBlue;"><b>Paper</b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/PruneTruong/GOCor" style="text-decoration: none;color: DarkBlue;"><b>Code</b></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://www.youtube.com/watch?v=V22MyFChBCs&feature=youtu.be"  style="text-decoration: none;color: DarkBlue "><b>Video</b></a></div>
+<div style="display: flex;justify-content: space-around;width:100%">
+	<div><a href="https://arxiv.org/abs/2009.07823"  style="text-decoration: none;color: DarkBlue;"><b>Paper</b></a></div>
+	<div><a href="https://github.com/PruneTruong/GOCor" style="text-decoration: none;color: DarkBlue;"><b>Code</b></a></div>
+	<div><a href="https://www.youtube.com/watch?v=V22MyFChBCs&feature=youtu.be"  style="text-decoration: none;color: DarkBlue "><b>Video (3mm)</b></a></div>
+	<div><a href="https://www.youtube.com/watch?v=V-kPP9buPYU"  style="text-decoration: none;color: DarkBlue "><b>Computer Vision Talks Video</b></a></div>
+</div>
 
 
 <hr style="border:0.01px solid LightGray"> </hr>
 
 <figure inline class=scaled style="width: 100%">
   <img src="./corr_diff_iteration.jpg">
-  <figcaption>Visualization of the matching confidences computed between the indicated location (green) in the reference image and all locations of either the reference image itself or the query image.  The feature correlation generates undistinctive and inaccurate confidences due to similar regions and repetitive patterns. In contrast, our <b>GOCor</b> predicts a distinct high-confidence value at the correct location. </figcaption>
+  <figcaption  style="text-align: center">Visualization of the matching confidences computed between the indicated location (green) in the reference image and all locations of either the reference image itself or the query image.  The feature correlation generates undistinctive and inaccurate confidences due to similar regions and repetitive patterns. In contrast, our <b>GOCor</b> predicts a distinct high-confidence value at the correct location. </figcaption>
 </figure>
 
 
@@ -60,7 +64,7 @@ Here, we warp the query image toward the reference image. We compare our GLU-Net
 
 * #### Aligning images of the ETH3D dataset
 
-Here, we warp the query image toward the reference image. We compare our GLU-Net to state-of-the-art optical flow method PWC-Net and geometric matching method DGC-Net. 
+Here, we warp the query image toward the reference image. We compare our GLU-Net-GOCor with original network GLU-Net. 
 
 <figure style="min-width: 100%; height: auto">
   <img src="./images/ETH3D_visual_glunet.jpg">
