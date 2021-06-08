@@ -54,6 +54,57 @@ Here, we warp the query images toward the reference images. Our approch PDC-Net 
 </figure>
 
 
+* #### Aligning eth3d sequences
+
+Here, we warp the query images toward the reference images. Our approch PDC-Net also predicts a confidence mask along with the dense correspondences. We show the warped query only in the estimated confident regions. 
+
+<figure>
+<img src="./video_eth3d/delivery_area_0_90_mid_47_concatenated.gif">
+<figcaption style="display: flex;justify-content: space-around;width:100%"> <div>Query</div> <div>Reference</div> <div><b>PDC-Net</b></div></figcaption>
+</figure>
+
+<figure>
+<img src="./video_eth3d/storage_room_0_None_mid_None_concatenated.gif">
+<figcaption style="display: flex;justify-content: space-around;width:100%"> <div>Query</div> <div>Reference</div> <div><b>PDC-Net</b></div></figcaption>
+</figure>
+
+<figure>
+<img src="./video_eth3d/storage_room_2_0_None_mid_None_concatenated.gif">
+<figcaption style="display: flex;justify-content: space-around;width:100%"> <div>Query</div> <div>Reference</div> <div><b>PDC-Net</b></div></figcaption>
+</figure>
+
+
+<figure>
+<img src="./video_eth3d/tunnel_35_128_mid_48_concatenated.gif">
+<figcaption style="display: flex;justify-content: space-around;width:100%"> <div>Query</div> <div>Reference</div> <div><b>PDC-Net</b></div></figcaption>
+</figure>
+
+
+<figure>
+<img src="./video_eth3d/electro_98_204_mid_150_concatenated.gif">
+<figcaption style="display: flex;justify-content: space-around;width:100%"> <div>Query</div> <div>Reference</div> <div><b>PDC-Net</b></div></figcaption>
+</figure>
+
+
+
+<figure>
+<img src="./video_eth3d/lakeside_0_80_mid_30_concatenated.gif">
+<figcaption style="display: flex;justify-content: space-around;width:100%"> <div>Query</div> <div>Reference</div> <div><b>PDC-Net</b></div></figcaption>
+</figure>
+
+<figure>
+<img src="./video_eth3d/playground_120_220_mid_154_concatenated.gif">
+<figcaption style="display: flex;justify-content: space-around;width:100%"> <div>Query</div> <div>Reference</div> <div><b>PDC-Net</b></div></figcaption>
+</figure>
+
+<figure>
+<img src="./video_eth3d/sand_box_0_None_mid_None_concatenated.gif">
+<figcaption style="display: flex;justify-content: space-around;width:100%"> <div>Query</div> <div>Reference</div> <div><b>PDC-Net</b></div></figcaption>
+</figure>
+
+
+
+
 * #### Texture transfer
 
 <figure>
