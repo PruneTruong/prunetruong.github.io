@@ -11,17 +11,20 @@ links:
       link: https://arxiv.org/abs/2101.01710
     - type: github
       link: https://github.com/PruneTruong/PDCNet
+    - type: youtube
+      link: https://youtu.be/bX0rEaSf88o
 ---
 
 
 # <div align="center"><span style="color:MediumBlue">Learning Accurate Dense Correspondences and When to Trust Them</span></div>
-## <div align="center"><span style="color:Blue">CVPR 2021 - ORAL</span></div>
+## <div align="center"><span style="color:Blue">CVPR 2021 - </span><span style="color:Red">ORAL</span></div>
 ###<div align="center"><span style="color:MediumSlateBlue" >Prune Truong &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://martin-danelljan.github.io/"  style="text-decoration: none;color: MediumSlateBlue">Martin Danelljan</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ee.ethz.ch/the-department/faculty/professors/person-detail.OTAyMzM=.TGlzdC80MTEsMTA1ODA0MjU5.html"  style="text-decoration: none;color: MediumSlateBlue">Luc Van Gool</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://people.ee.ethz.ch/~timofter/"  style="text-decoration: none;color: MediumSlateBlue">Radu Timofte</a></span></div>
 
 <hr style="border:0.01px solid LightGray"> </hr>
 
 <div style="display: flex;justify-content: space-around;width:100%">
 	<div><a href="https://arxiv.org/abs/2101.01710"  style="text-decoration: none;color: DarkBlue;"><b>Paper</b></a></div>
+	<div><a href="https://youtu.be/bX0rEaSf88o"  style="text-decoration: none;color: DarkBlue "><b>Video</b></a></div>
 	<div><a href="https://github.com/PruneTruong/PDCNet" style="text-decoration: none;color: DarkBlue;"><b>Code</b></a></div>
 </div>
 
