@@ -26,6 +26,8 @@ links:
 	<div><a href="https://arxiv.org/abs/2101.01710"  style="text-decoration: none;color: DarkBlue;"><b>Paper</b></a></div>
 	<div><a href="https://youtu.be/bX0rEaSf88o"  style="text-decoration: none;color: DarkBlue "><b>Video</b></a></div>
 	<div><a href="https://github.com/PruneTruong/PDCNet" style="text-decoration: none;color: DarkBlue;"><b>Code</b></a></div>
+	<div><a href="https://drive.google.com/file/d/18ya__AdEIgZyix8dXuRpJ15tdrpbMUsB/view?usp=sharing" style="text-decoration: none;color: DarkBlue;"><b>Poster</b></a></div>
+	<div><a href="https://drive.google.com/file/d/1zUQmpmVp6WSa_psuI3KFvKVrNyJE-beG/view?usp=sharing" style="text-decoration: none;color: DarkBlue;"><b>Slides</b></a></div>
 </div>
 
 <hr style="border:0.01px solid LightGray"> </hr>
