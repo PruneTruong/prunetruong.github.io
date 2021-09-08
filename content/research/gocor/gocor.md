@@ -95,7 +95,7 @@ Here, we warp the query image toward the reference image. We compare our GLU-Net
                    and Radu Timofte},
       year = {2020},
       booktitle = {Advances in Neural Information Processing Systems 33: Annual Conference on Neural Information
-                   Processing Systems 2020, {NeurIPS} 2020}
+                   Processing Systems, {NeurIPS} 2020}
 }
 ```
 

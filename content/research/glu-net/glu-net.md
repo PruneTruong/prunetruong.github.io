@@ -307,7 +307,7 @@ Here, we warp the source images toward the target image. We compare our GLU-Net 
                    Martin Danelljan and
                    Radu Timofte},
       year = {2020},
-      booktitle = {2020 {IEEE} Conference on Computer Vision and Pattern Recognition, {CVPR} 2020}
+      booktitle = {{IEEE} Conference on Computer Vision and Pattern Recognition, {CVPR} 2020}
 }
 ```
 

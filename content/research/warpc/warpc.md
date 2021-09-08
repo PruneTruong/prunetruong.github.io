@@ -16,7 +16,7 @@ links:
 
 # <div align="center"><span style="color:MediumBlue">Warp Consistency for Unsupervised Learning of Dense Correspondences</span></div>
 ## <div align="center"><span style="color:Blue">ICCV 2021 - </span><span style="color:Red">ORAL</span></div>
-###<div align="center"><span style="color:MediumSlateBlue" >Prune Truong &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://martin-danelljan.github.io/"  style="text-decoration: none;color: MediumSlateBlue">Martin Danelljan</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://people.ee.ethz.ch/~timofter/"  style="text-decoration: none;color: MediumSlateBlue">Fisher Yu</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ee.ethz.ch/the-department/faculty/professors/person-detail.OTAyMzM=.TGlzdC80MTEsMTA1ODA0MjU5.html"  style="text-decoration: none;color: MediumSlateBlue">Luc Van Gool</a> </span></div>
+###<div align="center"><span style="color:MediumSlateBlue" >Prune Truong &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://martin-danelljan.github.io/"  style="text-decoration: none;color: MediumSlateBlue">Martin Danelljan</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.yf.io/"  style="text-decoration: none;color: MediumSlateBlue">Fisher Yu</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ee.ethz.ch/the-department/faculty/professors/person-detail.OTAyMzM=.TGlzdC80MTEsMTA1ODA0MjU5.html"  style="text-decoration: none;color: MediumSlateBlue">Luc Van Gool</a> </span></div>
 
 <hr style="border:0.01px solid LightGray"> </hr>
 
@@ -47,7 +47,8 @@ We validate our warp consistency loss by training three recent dense corresponde
                Fisher Yu and 
                Luc Van Gool},
   title     = {Warp Consistency for Unsupervised Learning of Dense Correspondences},
-  year      = {2021},
+  booktitle = {{IEEE/CVF} International Conference on Computer Vision, {ICCV}},
+  year = {2021},
   url       = {https://arxiv.org/abs/2104.03308}
 }
 ```
