@@ -11,6 +11,8 @@ links:
       link: https://arxiv.org/abs/2104.03308
     - type: github
       link: https://github.com/PruneTruong/DenseMatching
+    - type: youtube
+      link: https://www.youtube.com/watch?v=IsMotj7-peA
 ---
 
 
@@ -23,9 +25,18 @@ links:
 <div style="display: flex;justify-content: space-around;width:100%">
 	<div><a href="https://arxiv.org/abs/2104.03308"  style="text-decoration: none;color: DarkBlue;"><b>Paper</b></a></div>
 	<div><a href="https://github.com/PruneTruong/DenseMatching" style="text-decoration: none;color: DarkBlue;"><b>Code</b></a></div>
+	<div><a href="https://drive.google.com/file/d/1PCXkjxvVsjHAbYzsBtgKWLO1uE6oGP6p/view?usp=sharing"  style="text-decoration: none;color: DarkBlue "><b>Poster</b></a></div>
+	<div><a href="https://www.youtube.com/watch?v=IsMotj7-peA"  style="text-decoration: none;color: DarkBlue "><b>Oral Video</b></a></div>
+	<div><a href="https://drive.google.com/file/d/1mVpLBW55nlNJZBsvxkBCti9_KhH1r9V_/view?usp=sharing" style="text-decoration: none;color: DarkBlue "><b>Slides</b></a></div>
 </div>
 
 <hr style="border:0.01px solid LightGray"> </hr>
+
+<figure inline style="width: 100%">
+  <img src="./images/intro.png">
+  <figcaption style="text-align: center">Estimating dense correspondences between the query (a) and the reference (b) image. The query is warped according to the resulting flows (c)-(d).
+The baseline (c) does not estimate an uncertainty map and is therefore unable to filter the inaccurate flows at, for example occluded and homogeneous regions. In contrast, our PDC-Net (d) not only estimates accurate correspondences, but also when to trust them. It predicts a robust uncertainty map that identifies accurate matches and excludes incorrect and unmatched pixels (red).</figcaption>
+</figure>
 
 
 ## Abstract
