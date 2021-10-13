@@ -32,12 +32,6 @@ links:
 
 <hr style="border:0.01px solid LightGray"> </hr>
 
-<figure inline style="width: 100%">
-  <img src="./images/intro.png">
-  <figcaption style="text-align: center">Estimating dense correspondences between the query (a) and the reference (b) image. The query is warped according to the resulting flows (c)-(d).
-The baseline (c) does not estimate an uncertainty map and is therefore unable to filter the inaccurate flows at, for example occluded and homogeneous regions. In contrast, our PDC-Net (d) not only estimates accurate correspondences, but also when to trust them. It predicts a robust uncertainty map that identifies accurate matches and excludes incorrect and unmatched pixels (red).</figcaption>
-</figure>
-
 
 ## Abstract
 The key challenge in learning dense correspondences lies in the lack of ground-truth matches for real image pairs.
