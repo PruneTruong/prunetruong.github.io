@@ -24,7 +24,6 @@ links:
 	<div><a href="https://arxiv.org/abs/1908.06812"  style="text-decoration: none;color: DarkBlue "><b>Paper</b></a></div>
 	<div><a href="https://github.com/PruneTruong/GLAMpoints_pytorch"  style="text-decoration: none;color: DarkBlue "><b>Code</b></a></div>
 	<div><a href="https://drive.google.com/file/d/1706DRoMCr7adBnxws1iLcwUfJ1ClEant/view?usp=sharing"  style="text-decoration: none;color: DarkBlue "><b>Poster</b></a></div>
-	<div><a href="https://www.retinai.com/glampoints"  style="text-decoration: none;color: DarkBlue "><b>Detailed Webpage</b></a></div>
 </div>
 
 <hr style="border:0.01px solid LightGray"> </hr>

@@ -33,6 +33,49 @@ Establishing robust and accurate correspondences between a pair of images is a l
 We propose the Enhanced Probabilistic Dense Correspondence Network, PDC-Net+, capable of estimating accurate dense correspondences along with a reliable confidence map. We develop a flexible probabilistic approach that jointly learns the flow prediction and its uncertainty. In particular, we parametrize the predictive distribution as a constrained mixture model, ensuring better modelling of both accurate flow predictions and outliers. Moreover, we develop an architecture and an enhanced training strategy tailored for robust and generalizable uncertainty prediction in the context of self-supervised training. Our approach obtains state-of-the-art results on multiple challenging geometric matching and optical flow datasets. We further validate the usefulness of our probabilistic confidence estimation for the tasks of pose estimation, 3D reconstruction, image-based localization, and image retrieval.
 
 
+## Visual Results:
+
+* #### Aligning indoor images from ScanNet
+
+We compute the flow field from the reference (middle) to the query (left). We plot the 1000 top confident matches as well. The warped query is represented on the right (and should resemble the middle). Only the regions for which the matches were predicted as confident are visible.
+
+<figure>
+<figcaption style="display: flex;justify-content: space-around;width:100%"> <div>Query</div> <div>Reference</div> <div><b>Warped query</b></div></figcaption>
+<img src="./scannet/sub_709-min.gif">
+</figure>
+
+
+<figure>
+<img src="./scannet/sub_740-min.gif">
+</figure>
+
+<figure>
+<img src="./scannet/sub_742-min.gif">
+</figure>
+
+<figure>
+<img src="./scannet/sub_744_2-min.gif">
+</figure>
+<figure>
+<img src="./scannet/sub_746-min.gif">
+</figure>
+
+
+* #### Aligning video object segmentation data from DAVIS
+
+Here, we warp the query images toward the reference images. Our approch PDC-Net+ also predicts a confidence mask along with the dense correspondences. We show the warped query only in the estimated confident regions.
+
+<figure>
+<figcaption style="display: flex;justify-content: space-around;width:100%"> <div>Query</div> <div>Reference</div> <div><b>Warped query</b></div></figcaption>
+<img src="./davis/bear_0_82_mid_41_81-min.gif">
+</figure>
+
+<figure>
+<figcaption style="display: flex;justify-content: space-around;width:100%"> <div>Query</div> <div>Reference</div> <div><b>Warped query</b></div></figcaption>
+<img src="./davis/bus_0_80_mid_40_79-min.gif">
+</figure>
+
+
 ## How to cite:
 ```
 @inproceedings{pdcnet+,
