@@ -14,6 +14,43 @@
 <h2>Abstract</h2>
 <p>Establishing robust and accurate correspondences between a pair of images is a long-standing computer vision problem with numerous applications. While classically dominated by sparse methods, emerging dense approaches offer a compelling alternative paradigm that avoids the keypoint detection step. However, dense flow estimation is often inaccurate in the case of large displacements, occlusions, or homogeneous regions. In order to apply dense methods to real-world applications, such as pose estimation, image manipulation, or 3D reconstruction, it is therefore crucial to estimate the confidence of the predicted matches.
 We propose the Enhanced Probabilistic Dense Correspondence Network, PDC-Net+, capable of estimating accurate dense correspondences along with a reliable confidence map. We develop a flexible probabilistic approach that jointly learns the flow prediction and its uncertainty. In particular, we parametrize the predictive distribution as a constrained mixture model, ensuring better modelling of both accurate flow predictions and outliers. Moreover, we develop an architecture and an enhanced training strategy tailored for robust and generalizable uncertainty prediction in the context of self-supervised training. Our approach obtains state-of-the-art results on multiple challenging geometric matching and optical flow datasets. We further validate the usefulness of our probabilistic confidence estimation for the tasks of pose estimation, 3D reconstruction, image-based localization, and image retrieval.</p>
+<h2>Visual Results:</h2>
+<ul>
+<li>
+<h4>Aligning indoor images from ScanNet</h4>
+</li>
+</ul>
+<p>We compute the flow field from the reference (middle) to the query (left). We plot the 1000 top confident matches as well. The warped query is represented on the right (and should resemble the middle). Only the regions for which the matches were predicted as confident are visible.</p>
+<figure>
+<figcaption style="display: flex;justify-content: space-around;width:100%"> <div>Query</div> <div>Reference</div> <div><b>Warped query</b></div></figcaption>
+<img src="/0746106798c8e9352482e2c33641a9a2/sub_709-min.gif">
+</figure>
+<figure>
+<img src="/311eec5a2fb2a05803566c5b8cd90061/sub_740-min.gif">
+</figure>
+<figure>
+<img src="/14351ac966b27974c7cb62ec383443b6/sub_742-min.gif">
+</figure>
+<figure>
+<img src="/1589010d9353fcd4fc8fa88d68acdf99/sub_744_2-min.gif">
+</figure>
+<figure>
+<img src="/14d77813e3abb4d4ac682bb17d3054b6/sub_746-min.gif">
+</figure>
+<ul>
+<li>
+<h4>Aligning video object segmentation data from DAVIS</h4>
+</li>
+</ul>
+<p>Here, we warp the query images toward the reference images. Our approch PDC-Net+ also predicts a confidence mask along with the dense correspondences. We show the warped query only in the estimated confident regions.</p>
+<figure>
+<figcaption style="display: flex;justify-content: space-around;width:100%"> <div>Query</div> <div>Reference</div> <div><b>Warped query</b></div></figcaption>
+<img src="/73d0fbb8759a10d752cf3c0bd6290276/bear_0_82_mid_41_81-min.gif">
+</figure>
+<figure>
+<figcaption style="display: flex;justify-content: space-around;width:100%"> <div>Query</div> <div>Reference</div> <div><b>Warped query</b></div></figcaption>
+<img src="/ed29728d53a2c02ab093eeacde720519/bus_0_80_mid_40_79-min.gif">
+</figure>
 <h2>How to cite:</h2>
 <pre><code>@inproceedings{pdcnet+,
   author    = {Prune Truong and
@@ -25,4 +62,4 @@ We propose the Enhanced Probabilistic Dense Correspondence Network, PDC-Net+, ca
   year      = {2021},
   url       = {https://arxiv.org/abs/2109.13912}
 }
-</code></pre></div></section></main><footer>© <!-- -->Prune Truong<!-- --> <!-- -->2021</footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/research/pdcnet+";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-f868fe25d0aa00fbbcbe.js"],"app":["/app-80282710aa7224410198.js"],"component---src-pages-404-js":["/component---src-pages-404-js-c610ccd13d1451e007e6.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-f169a2772bac9ef38f52.js"],"component---src-pages-page-2-js":["/component---src-pages-page-2-js-8a90a8b725a99e509870.js"],"component---src-pages-using-typescript-tsx":["/component---src-pages-using-typescript-tsx-82488d0082cc32dffdc4.js"],"component---src-templates-research-tsx":["/component---src-templates-research-tsx-8067b3656d78d0d8542a.js"]};/*]]>*/</script><script src="/polyfill-f868fe25d0aa00fbbcbe.js" nomodule=""></script><script src="/component---src-templates-research-tsx-8067b3656d78d0d8542a.js" async=""></script><script src="/commons-ed2567a3312540406cd7.js" async=""></script><script src="/styles-24c541b6ac347bae38f1.js" async=""></script><script src="/app-80282710aa7224410198.js" async=""></script><script src="/framework-b5b229d58c3c710d5429.js" async=""></script><script src="/webpack-runtime-a12a095ffaee7a5aa979.js" async=""></script></body></html>
+</code></pre></div></section></main><footer>© <!-- -->Prune Truong<!-- --> <!-- -->2022</footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/research/pdcnet+";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-f868fe25d0aa00fbbcbe.js"],"app":["/app-80282710aa7224410198.js"],"component---src-pages-404-js":["/component---src-pages-404-js-c610ccd13d1451e007e6.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-f169a2772bac9ef38f52.js"],"component---src-pages-page-2-js":["/component---src-pages-page-2-js-8a90a8b725a99e509870.js"],"component---src-pages-using-typescript-tsx":["/component---src-pages-using-typescript-tsx-82488d0082cc32dffdc4.js"],"component---src-templates-research-tsx":["/component---src-templates-research-tsx-8067b3656d78d0d8542a.js"]};/*]]>*/</script><script src="/polyfill-f868fe25d0aa00fbbcbe.js" nomodule=""></script><script src="/component---src-templates-research-tsx-8067b3656d78d0d8542a.js" async=""></script><script src="/commons-ed2567a3312540406cd7.js" async=""></script><script src="/styles-24c541b6ac347bae38f1.js" async=""></script><script src="/app-80282710aa7224410198.js" async=""></script><script src="/framework-b5b229d58c3c710d5429.js" async=""></script><script src="/webpack-runtime-a12a095ffaee7a5aa979.js" async=""></script></body></html>
