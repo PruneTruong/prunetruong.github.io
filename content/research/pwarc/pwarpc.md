@@ -4,13 +4,15 @@ path: '/research/pwarpc'
 title: 'PWarpC [CVPR 2022]'
 date: '2022-03-15'
 featured: true
-description: semantic matching, weakly-supervised
+description: Semantic matching, weakly-supervised learning, occlusion handling
 
 links:
     - type: arxiv
       link: https://arxiv.org/abs/2203.04279
     - type: github
       link: https://github.com/PruneTruong/DenseMatching
+    - type: youtube
+      link: https://www.youtube.com/watch?v=I2KtnvI8xZU
 ---
 
 
@@ -23,6 +25,8 @@ links:
 <div style="display: flex;justify-content: space-around;width:100%">
 	<div><a href="https://arxiv.org/abs/2203.04279"  style="text-decoration: none;color: DarkBlue;"><b>Paper</b></a></div>
 	<div><a href="https://github.com/PruneTruong/DenseMatching" style="text-decoration: none;color: DarkBlue;"><b>Code</b></a></div>
+	<div><a href="https://drive.google.com/file/d/1lP5E3BNqdKJL1q-YsQ-C7rOwkcb5S63W/view?usp=sharing"  style="text-decoration: none;color: DarkBlue "><b>Poster</b></a></div>
+	<div><a href="https://www.youtube.com/watch?v=I2KtnvI8xZU"  style="text-decoration: none;color: DarkBlue "><b>Video</b></a></div>
 </div>
 
 <hr style="border:0.01px solid LightGray"> </hr>
@@ -30,6 +34,24 @@ links:
 
 ## Abstract
 We propose Probabilistic Warp Consistency, a weakly-supervised learning objective for semantic matching. Our approach directly supervises the dense matching scores predicted by the network, encoded as a conditional probability distribution. We first construct an image triplet by applying a known warp to one of the images in a pair depicting different instances of the same object class. Our probabilistic learning objectives are then derived using the constraints arising from the resulting image triplet. We further account for occlusion and background clutter present in real image pairs by extending our probabilistic output space with a learnable unmatched state. To supervise it, we design an objective between image pairs depicting different object classes. We validate our method by applying it to four recent semantic matching architectures. Our weakly-supervised approach sets a new state-of-the-art on four challenging semantic matching benchmarks. Lastly, we demonstrate that our objective also brings substantial improvements in the strongly-supervised regime, when combined with keypoint annotations. 
+
+
+
+<figure>
+<figcaption style="display: flex;justify-content: space-around;width:100%"> Overview of our Probabilistic Warp Consistency approach. </figcaption>
+<img src="intro_reversed.png">
+</figure>
+
+
+
+
+## Visual Results
+
+
+<figure>
+<figcaption style="display: flex;justify-content: space-around;width:100%">Example predictions of baseline SF-Net (left) and our approach PWarpC-SF-Net (right) on image pairs of the PF-Willow dataset. Correct matches are shown in green. </figcaption>
+<img src="sfnet_pfwillow.jpg">
+</figure>
 
 
 
