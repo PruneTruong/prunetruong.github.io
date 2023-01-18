@@ -15,7 +15,6 @@ links:
       link: https://www.youtube.com/watch?v=I2KtnvI8xZU
 ---
 
-
 # <div align="center"><span style="color:MediumBlue">Probabilistic Warp Consistency for Weakly-Supervised Semantic Correspondences</span></div>
 ## <div align="center"><span style="color:Blue">CVPR 2022</div>
 ###<div align="center"><span style="color:MediumSlateBlue" >Prune Truong &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://martin-danelljan.github.io/"  style="text-decoration: none;color: MediumSlateBlue">Martin Danelljan</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.yf.io/"  style="text-decoration: none;color: MediumSlateBlue">Fisher Yu</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://ee.ethz.ch/the-department/faculty/professors/person-detail.OTAyMzM=.TGlzdC80MTEsMTA1ODA0MjU5.html"  style="text-decoration: none;color: MediumSlateBlue">Luc Van Gool</a> </span></div>
@@ -30,6 +29,7 @@ links:
 </div>
 
 <hr style="border:0.01px solid LightGray"> </hr>
+
 
 
 ## Abstract

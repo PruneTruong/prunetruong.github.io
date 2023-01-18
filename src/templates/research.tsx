@@ -100,9 +100,6 @@ const Research: FC<ResearchArticleProps> = ({ data: { post } }) => (
         }
       }}
     >
-      <header>
-        {post.frontmatter?.links && <StyledResearchLinks links={post.frontmatter.links} size={46} />}
-      </header>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </section>
   </Layout>

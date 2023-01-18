@@ -57,7 +57,7 @@ export const PersonalInformation: FC = () => {
             . I am also advised by {' '}
             <Link href="https://martin-danelljan.github.io/">
               Dr. Martin Danelljan
-            </Link>. My main research interests are Computer Vision and its applications, especially in the task of image matching. I had the change to do an internship at {' '}<Link href="https://www.microsoft.com/en-us/research/lab/mixed-reality-ai-zurich/">Microsoft Mixed Reality and AI Lab</Link>. 
+            </Link>. My main research interests are Computer Vision and its applications, especially in the task of image matching. I had the chance to conduct internships at Google and {' '}<Link href="https://www.microsoft.com/en-us/research/lab/mixed-reality-ai-zurich/">Microsoft Mixed Reality and AI Lab</Link>. 
 	    Previously, I obtained a Master’s degree in Mechanical Engineering
             with honors at ETH Zurich. I also conducted an internship at {' '}
             <Link href="https://www.retinai.com/">RetinAI</Link> focused on
