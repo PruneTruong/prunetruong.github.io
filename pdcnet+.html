@@ -1,0 +1,156 @@
+
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <title>PDC-Net+</title>
+</head>
+
+<body>
+  <div class="container">
+    <br>
+    <div style="text-align: center;">
+      <h1>PDC-Net+</h1>
+      <h2>Enhanced Probabilistic Dense Correspondence Network</h2>
+      <div>
+        <span style="margin-right: 15px; font-size: 1.3em;color:#ff0000;"><strong>TPAMI 2023</strong></span>
+      </div>
+
+      <div style="margin-top: 15px;">
+        <span style="margin-right: 15px; font-size: 1.1em;"><a href="https://prunetruong.com/" target="_blank">Prune Truong</a></span>
+        <span style="margin-right: 15px; font-size: 1.1em;"><a href="https://martin-danelljan.github.io/" target="_blank">Martin Danelljan</a></span>
+        <span style="margin-right: 15px; font-size: 1.1em;"><a href="https://www.informatik.uni-wuerzburg.de/computervision/home/" target="_blank">Radu Timofte</a></span>
+        <span style="margin-right: 15px; font-size: 1.1em;"><a href="https://ee.ethz.ch/the-department/faculty/professors/person-detail.OTAyMzM=.TGlzdC80MTEsMTA1ODA0MjU5.html" target="_blank">Luc Van Gool</a></span>
+      </div>
+      <div style="margin-top: 15px;">
+        ETH Zurich - Computer Vision Lab
+      </div>
+    </div>
+
+    <div class="text-center" style="font-size: 1.5em; margin-top: 25px;">
+      <a class="btn btn-primary btn-lg" target="_blank"
+        href="https://arxiv.org/abs/2109.13912" role="button"
+        style="margin-right: 10px;  margin-bottom: 10px;">Arxiv</a>
+        <a class="btn btn-primary btn-lg" target="_blank"
+        href="https://github.com/PruneTruong/DenseMatching" role="button"
+        style="margin-right: 10px;  margin-bottom: 10px;">Code</a>
+    </div>
+
+    <div style="margin-top: 30px;">
+      <h2 class="text-center">
+        Abstract
+      </h2>
+      <p style="font-style: italic; margin-bottom: 5px;" class="text-left">
+        Establishing robust and accurate correspondences between a pair of images is a long-standing computer
+        vision problem with numerous applications. While classically dominated by sparse methods, emerging dense
+        approaches offer a compelling alternative paradigm that avoids the keypoint detection step. However,
+        dense flow estimation is often inaccurate in the case of large displacements, occlusions, or homogeneous
+        regions. In order to apply dense methods to real-world applications, such as pose estimation,
+        image manipulation, or 3D reconstruction, it is therefore crucial to estimate the confidence
+        of the predicted matches.
+        We propose the Enhanced Probabilistic Dense Correspondence Network, PDC-Net+, capable of
+        estimating accurate dense correspondences along with a reliable confidence map. We develop a
+        flexible probabilistic approach that jointly learns the flow prediction and its uncertainty. In particular,
+        we parametrize the predictive distribution as a constrained mixture model, ensuring better modelling of
+        both accurate flow predictions and outliers. Moreover, we develop an architecture and an enhanced training
+        strategy tailored for robust and generalizable uncertainty prediction in the context of self-supervised
+        training. Our approach obtains state-of-the-art results on multiple challenging geometric matching and optical
+        flow datasets. We further validate the usefulness of our probabilistic confidence estimation for the tasks
+        of pose estimation, 3D reconstruction, image-based localization, and image retrieval.
+      </p>
+    </div>
+
+
+    <div style="margin-top:50px;">
+      <h2 class="text-center">
+        Visual Results
+      </h2>
+      <br>
+
+      <h4 class="text-left" >Aligning indoor images from ScanNet</h4>
+      <p class="text-left">
+        We compute the flow field from the reference (middle) to the query (left). We plot the 1000 top
+        confident matches as well. The warped query is represented on the right (and should resemble
+        the middle). Only the regions for which the matches were predicted as confident are visible.
+      </p>
+
+        <div class="col-md-12 col-sm-12 col-xs-12 gallery">
+          <figcaption style="display: flex;justify-content: space-around;width:100%"> <div>Query img</div> <div>Reference img</div> <div><b>Warped query</b></div></figcaption>
+          <img src="media/pdcnet+/scannet/sub_740-min.gif" width=100% class="img-fluid" alt="Responsive image">
+        </div>
+        <br>
+        <div class="col-md-12 col-sm-12 col-xs-12 gallery">
+          <img src="media/pdcnet+/scannet/sub_742-min.gif" width=100% class="img-fluid" alt="Responsive image">
+        </div>
+        <br>
+        <div class="col-md-12 col-sm-12 col-xs-12 gallery">
+          <img src="media/pdcnet+/scannet/sub_744_2-min.gif" width=100% class="img-fluid" alt="Responsive image">
+        </div>
+        <br>
+        <div class="col-md-12 col-sm-12 col-xs-12 gallery">
+          <img src="media/pdcnet+/scannet/sub_746-min.gif" width=100% class="img-fluid" alt="Responsive image">
+        </div>
+
+      <br>
+      <br>
+
+      <h4  class="text-left" >Aligning video object segmentation data from DAVIS </h4>
+      <p class="text-left" >
+        Here, we warp the query images toward the reference images. Our approach PDC-Net+ also predicts
+        a confidence mask along with the dense correspondences. We show the warped query only in the
+        estimated confident regions.
+      </p>
+
+        <div class="col-md-12 col-sm-12 col-xs-12 gallery">
+          <figcaption style="display: flex;justify-content: space-around;width:100%"> <div>Query img</div> <div>Reference img</div> <div><b>Warped query</b></div></figcaption>
+          <img src="media/pdcnet+/davis/bear_0_82_mid_41_81-min.gif" width=100% class="img-fluid" alt="Responsive image">
+        </div>
+        <br>
+        <div class="col-md-12 col-sm-12 col-xs-12 gallery">
+          <img src="media/pdcnet+/davis/bus_0_80_mid_40_79-min.gif" width=100% class="img-fluid" alt="Responsive image">
+        </div>
+
+      <div>
+        <h2 class="text-center" style="margin-top: 30px;">
+          Citation
+        </h2>
+        <p class="text-left">
+          If you want to cite our work, please use:
+        </p>
+        <pre class="text-left">
+@article{pdcnet+,
+  author    = {Prune Truong and
+               Martin Danelljan and
+               Radu Timofte and
+               Luc Van Gool},
+  title     = {PDC-Net+: Enhanced Probabilistic Dense Correspondence Network},
+  booktitle = {IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)},
+  year      = {2023},
+  url       = {https://arxiv.org/abs/2109.13912}
+}
+      </pre>
+      </div>
+
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+

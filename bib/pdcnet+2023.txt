@@ -1,0 +1,10 @@
+@article{pdcnet+,
+  author    = {Prune Truong and
+               Martin Danelljan and
+               Radu Timofte and
+               Luc Van Gool},
+  title     = {PDC-Net+: Enhanced Probabilistic Dense Correspondence Network},
+  booktitle = {IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)},
+  year      = {2023},
+  url       = {https://arxiv.org/abs/2109.13912}
+}

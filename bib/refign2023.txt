@@ -1,0 +1,6 @@
+@inproceedings{bruggemann2022refign,
+  title={Refign: Align and Refine for Adaptation of Semantic Segmentation to Adverse Conditions},
+  author={Bruggemann, David and Sakaridis, Christos and Truong, Prune and Van Gool, Luc},
+  booktitle={WACV},
+  year={2023}
+}

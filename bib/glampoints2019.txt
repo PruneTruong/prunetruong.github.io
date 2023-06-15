@@ -1,0 +1,8 @@
+@inproceedings{Truong2019GLAMpoints,
+title = {{GLAMpoints}: Greedily Learned Accurate Match Points},
+author = {Prune Truong and Stefanos Apostolopoulos and Agata Mosinska and 
+	Samuel Stucky and Carlos Ciller and Sandro De Zanet},
+booktitle = {{IEEE/CVF} International Conference on Computer Vision, {ICCV}},
+year = {2019},
+pages = {10731-10740}
+}

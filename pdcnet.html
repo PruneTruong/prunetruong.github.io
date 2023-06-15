@@ -1,0 +1,261 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <title>PDC-Net</title>
+</head>
+
+<body>
+  <div class="container">
+    <br>
+    <div style="text-align: center;">
+      <h1>PDC-Net</h1>
+      <h2>Learning Accurate Dense Correspondences and When to Trust Them</h2>
+      <div>
+        <span style="margin-right: 15px; font-size: 1.3em;color:#ff0000;"><strong>CVPR 2021 - ORAL</strong></span>
+      </div>
+      <div style="margin-top: 12px;">
+        <span style="margin-right: 15px; font-size: 1.1em;"><a href="https://prunetruong.com/" target="_blank">Prune Truong</a></span>
+        <span style="margin-right: 15px; font-size: 1.1em;"><a href="https://martin-danelljan.github.io/" target="_blank">Martin Danelljan</a></span>
+        <span style="margin-right: 15px; font-size: 1.1em;"><a href="https://ee.ethz.ch/the-department/faculty/professors/person-detail.OTAyMzM=.TGlzdC80MTEsMTA1ODA0MjU5.html" target="_blank">Luc Van Gool</a></span>
+        <span style="margin-right: 15px; font-size: 1.1em;"><a href="https://www.informatik.uni-wuerzburg.de/computervision/home/" target="_blank">Radu Timofte</a></span>
+      </div>
+      <div style="margin-top: 15px;">
+        ETH Zurich - Computer Vision Lab
+      </div>
+
+    </div>
+
+    <div class="text-center" style="font-size: 1.5em; margin-top: 25px;">
+      <a class="btn btn-primary btn-lg" target="_blank"
+        href="https://arxiv.org/abs/2101.01710" role="button"
+        style="margin-right: 10px;  margin-bottom: 10px;">Arxiv</a>
+        <a class="btn btn-primary btn-lg" target="_blank"
+        href="https://github.com/PruneTruong/DenseMatching" role="button"
+        style="margin-right: 10px;  margin-bottom: 10px;">Code</a>
+        <a class="btn btn-primary btn-lg" target="_blank"
+        href="https://youtu.be/bX0rEaSf88o" role="button"
+        style="margin-right: 10px;  margin-bottom: 10px;">Video</a>
+        <a class="btn btn-primary btn-lg" target="_blank"
+        href="https://drive.google.com/file/d/18ya__AdEIgZyix8dXuRpJ15tdrpbMUsB/view?usp=sharing" role="button"
+        style="margin-right: 10px;  margin-bottom: 10px;">Poster</a>
+      <a class="btn btn-primary btn-lg" target="_blank"
+        href="https://drive.google.com/file/d/1zUQmpmVp6WSa_psuI3KFvKVrNyJE-beG/view?usp=sharing" role="button"
+        style="margin-right: 10px;  margin-bottom: 10px;">Slides</a>
+    </div>
+
+    <br><br>
+    <div class="row">
+        <p style="text-align:center;margin:auto">
+          <img src="media/pdcnet/images/intro.png" class="center"  width=80% alt="Responsive image">
+        </p>
+        <p style="font-style: italic; margin-bottom: 5px;" class="text-left">
+          Estimating dense correspondences between the query (a) and the reference (b) image.
+          The query is warped according to the resulting flows (c)-(d). The baseline (c) does not
+          estimate an uncertainty map and is therefore unable to filter the inaccurate flows at,
+          for example occluded and homogeneous regions. In contrast, <strong>our PDC-Net (d) not only
+          estimates accurate correspondences, but also when to trust them</strong>. It predicts a robust
+          uncertainty map that identifies accurate matches and excludes incorrect and unmatched pixels (red).
+        </p>
+    </div>
+
+    <div style="margin-top: 30px;">
+      <h2 class="text-center">
+        Abstract
+      </h2>
+      <p style="font-style: italic; margin-bottom: 5px;" class="text-left">
+        Establishing dense correspondences between a pair of images is an important and general problem.
+        However, dense flow estimation is often inaccurate in the case of large displacements or homogeneous regions.
+        For most applications and down-stream tasks, such as pose estimation, image manipulation, or
+        3D reconstruction, it is crucial to know when and where to trust the estimated correspondences.
+
+        In this work, we aim to estimate a dense flow field relating two images, coupled with a robust pixel-wise
+        confidence map indicating the reliability and accuracy of the prediction. We develop a flexible
+        probabilistic approach that jointly learns the flow prediction and its uncertainty. In particular, we
+        parametrize the predictive distribution as a constrained mixture model, ensuring better modelling of both
+        accurate flow predictions and outliers. Moreover, we develop an architecture and training strategy tailored
+        for robust and generalizable uncertainty prediction in the context of self-supervised training. Our approach
+        obtains state-of-the-art results on multiple challenging geometric matching and optical flow datasets.
+        We further validate the usefulness of our probabilistic confidence estimation for the task of pose estimation.
+      </p>
+
+    </div>
+
+
+    <div style="margin-top:10px;">
+      <h2 class="text-center">
+        Teaser Video
+      </h2>
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/bX0rEaSf88o" allowfullscreen></iframe>
+      </div>
+    </div>
+
+
+    <div style="margin-top:50px;">
+      <h2 class="text-center">
+        Visual Results
+      </h2>
+      <br>
+
+
+      <h4 class="text-left" >Aligning images of the Aachen city</h4>
+      <p class="text-left">
+        Here, we warp the query images toward the reference images. Our approch PDC-Net also predicts a
+        confidence mask along with the dense correspondences. We show the warped query only in the
+        estimated confident regions.
+
+      </p>
+
+        <div class="col-md-12 col-sm-12 col-xs-12 gallery">
+          <img src="media/pdcnet/video_texture_transfer/aachen_concatenated.gif" width=100% class="img-fluid" alt="Responsive image">
+          <figcaption style="display: flex;justify-content: space-around;width:100%"> <div>Query</div> <div>Reference</div> <div><b>PDC-Net</b></div></figcaption>
+        </div>
+        <br>
+        <br>
+      <h4 class="text-left" >Aligning eth3d sequences</h4>
+      <p class="text-left">
+        Here, we warp the query images toward the reference images. Our approach PDC-Net also predicts a
+        confidence mask along with the dense correspondences. We show the warped query only in the estimated
+        confident regions.
+
+      </p>
+
+        <div class="col-md-12 col-sm-12 col-xs-12 gallery">
+          <figcaption style="display: flex;justify-content: space-around;width:100%"> <div>Query img      </div> <div>Reference img   </div> <div><b>Warped query</b></div></figcaption>
+          <img src="media/pdcnet/video_eth3d/delivery_area_0_90_mid_47_concatenated.gif" width=100% class="img-fluid" alt="Responsive image">
+        </div>
+        <br>
+
+        <div class="col-md-12 col-sm-12 col-xs-12 gallery">
+          <img src="media/pdcnet/video_eth3d/storage_room_0_None_mid_None_concatenated.gif" width=100% class="img-fluid" alt="Responsive image">
+        </div>
+        <br>
+        <div class="col-md-12 col-sm-12 col-xs-12 gallery">
+          <img src="media/pdcnet/video_eth3d/storage_room_2_0_None_mid_None_concatenated.gif" width=100% class="img-fluid" alt="Responsive image">
+        </div>
+        <br>
+        <div class="col-md-12 col-sm-12 col-xs-12 gallery">
+          <img src="media/pdcnet/video_eth3d/tunnel_35_128_mid_48_concatenated.gif" width=100% class="img-fluid" alt="Responsive image">
+        </div>
+        <br>
+        <div class="col-md-12 col-sm-12 col-xs-12 gallery">
+          <img src="media/pdcnet/video_eth3d/electro_98_204_mid_150_concatenated.gif" width=100% class="img-fluid" alt="Responsive image">
+        </div>
+        <br>
+        <div class="col-md-12 col-sm-12 col-xs-12 gallery">
+          <img src="media/pdcnet/video_eth3d/lakeside_0_80_mid_30_concatenated.gif" width=100% class="img-fluid" alt="Responsive image">
+        </div>        <br>
+        <div class="col-md-12 col-sm-12 col-xs-12 gallery">
+          <img src="media/pdcnet/video_eth3d/playground_120_220_mid_154_concatenated.gif" width=100% class="img-fluid" alt="Responsive image">
+        </div>        <br>
+        <div class="col-md-12 col-sm-12 col-xs-12 gallery">
+          <img src="media/pdcnet/video_eth3d/sand_box_0_None_mid_None_concatenated.gif" width=100% class="img-fluid" alt="Responsive image">
+        </div>        <br>
+      <br>
+      <br>
+
+
+      <h4  class="text-left" >Texture transfer</h4>
+
+        <div class="col-md-12 col-sm-12 col-xs-12 gallery">
+          <figcaption style="display: flex;justify-content: space-around;width:100%"> <div>Query img</div> <div>Reference img</div> <div><b>Warped query</b></div></figcaption>
+          <img src="media/pdcnet/video_texture_transfer/concatenated.gif" width=100% class="img-fluid" alt="Responsive image">
+        </div>
+      <br>
+      <p class="text-left" >
+        or with larger appearance transformations...
+      </p>
+
+      <br>
+        <div class="col-md-12 col-sm-12 col-xs-12 gallery">
+          <figcaption style="display: flex;justify-content: space-around;width:100%"> <div>Query img</div> <div>Reference img</div> <div><b>PDC-Net</b></div></figcaption>
+          <img src="media/pdcnet/video_texture_transfer/color/concatenated.gif" width=100% class="img-fluid" alt="Responsive image">
+
+        </div>
+        <br>
+      <div class="col-md-12 col-sm-12 col-xs-12 gallery">
+          <figcaption style="display: flex;justify-content: space-around;width:100%"> <div>Query img</div> <div>Reference img</div> <div><b>PDC-Net</b></div></figcaption>
+          <img src="media/pdcnet/video_texture_transfer/temple/concatenated.gif" width=100% class="img-fluid" alt="Responsive image">
+      </div>
+      <div>
+
+
+        <br>
+        <br>
+        <h4  class="text-left" >Aligning images of KITTI-2015</h4>
+      <p class="text-left" >
+        We here show qualitative examples of our approach PDC-Net applied to images of KITTI-2015. We plot directly the estimated flow field for each image pair.
+
+      </p>
+        <div class="col-md-12 col-sm-12 col-xs-12 gallery">
+          <img src="media/pdcnet/images/kitti2015.jpg" width=100% class="img-fluid" alt="Responsive image">
+        </div>
+        <br>
+        <br>
+
+        <h4  class="text-left" >Aligning images of MegaDepth</h4>
+      <p class="text-left" >
+        We show qualitative examples of our approach PDC-Net and corresponding non-probabilistic baseline GLU-Net-GOCor*,
+        applied to images of the MegaDepth dataset. In the 3rd and 4th columns, we visualize the query images warped
+        according to the flow fields estimated by the GLU-Net-GOCor* and PDC-Net respectively. PDC-Net also predicts
+        a confidence map, according to which the regions represented in red, are unreliable or inaccurate matching
+        regions. In the last column, we overlay the reference image with the warped query from PDC-Net, in the
+        identified accurate matching regions (lighter color).
+
+      </p>
+        <div class="col-md-12 col-sm-12 col-xs-12 gallery">
+          <img src="media/pdcnet/images/mega_1.png" width=100% class="img-fluid" alt="Responsive image">
+        </div>
+        <br>
+        <br>
+
+        <h4  class="text-left" >3D reconstruction of Aachen</h4>
+        <div class="col-md-12 col-sm-12 col-xs-12 gallery">
+          <img src="media/pdcnet/images/Aachen_0_07_3D_iso_HR copie.jpg" width=100% class="img-fluid" alt="Responsive image">
+        </div>
+
+        <h2 class="text-center" style="margin-top: 30px;">
+          Citation
+        </h2>
+        <p class="text-left">
+          If you want to cite our work, please use:
+        </p>
+        <pre class="text-left">
+          @inproceedings{pdcnet,
+            author    = {Prune Truong and
+                         Martin Danelljan and
+                         Luc Van Gool and
+                         Radu Timofte},
+            title     = {Learning Accurate Dense Correspondences and When to Trust Them},
+            booktitle = {{IEEE/CVF} Conference on Computer Vision and Pattern Recognition, {CVPR}},
+            year      = {2021},
+            url       = {https://arxiv.org/abs/2101.01710}
+          }
+      </pre>
+      </div>
+
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+

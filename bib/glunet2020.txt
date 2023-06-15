@@ -1,0 +1,8 @@
+@inproceedings{GLUNet_Truong_2020,
+      title = {{GLU-Net}: Global-Local Universal Network for dense flow and correspondences},
+      author    = {Prune Truong and
+                   Martin Danelljan and
+                   Radu Timofte},
+      year = {2020},
+      booktitle = {{IEEE} Conference on Computer Vision and Pattern Recognition, {CVPR} 2020}
+}

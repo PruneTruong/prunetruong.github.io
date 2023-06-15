@@ -1,0 +1,9 @@
+@inproceedings{GOCor_Truong_2020,
+      title = {{GOCor}: Bringing Globally Optimized Correspondence Volumes into Your Neural Network},
+      author    = {Prune Truong 
+                   and Martin Danelljan 
+                   and Luc Van Gool 
+                   and Radu Timofte},
+      year = {2020},
+      booktitle = {Advances in Neural Information Processing Systems 33: Annual Conference on Neural Information Processing Systems, {NeurIPS} 2020}
+}

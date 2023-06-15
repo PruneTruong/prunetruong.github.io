@@ -1,0 +1,10 @@
+@inproceedings{probabilistic_warpc,
+  author    = {Prune Truong and
+               Martin Danelljan and
+               Fisher Yu and 
+               Luc Van Gool},
+  title     = {Probabilistic Warp Consistency for Weakly-Supervised Semantic Correspondences},
+  booktitle = {{IEEE/CVF} Conference on Computer Vision and Pattern Recognition, {CVPR}},
+  year = {2022},
+  url  = {https://arxiv.org/abs/2203.04279}
+}
