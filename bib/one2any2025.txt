@@ -1,0 +1,8 @@
+@InProceedings{Liu_2025_CVPR,
+    author    = {Liu, Mengya and Li, Siyuan and Chhatkuli, Ajad and Truong, Prune and Van Gool, Luc and Tombari, Federico},
+    title     = {One2Any: One-Reference 6D Pose Estimation for Any Object},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2025},
+    pages     = {6457-6467}
+}

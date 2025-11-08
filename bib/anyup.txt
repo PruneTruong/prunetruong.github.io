@@ -1,0 +1,6 @@
+@article{wimmer2025anyup,
+    title={AnyUp: Universal Feature Upsampling},
+    author={Wimmer, Thomas and Truong, Prune and Rakotosaona, Marie-Julie and Oechsle, Michael and Tombari, Federico and Schiele, Bernt and Lenssen, Jan Eric},
+    journal={arXiv preprint arXiv:2510.12764},
+    year={2025}
+}

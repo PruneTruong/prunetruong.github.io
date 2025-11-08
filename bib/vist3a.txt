@@ -1,0 +1,6 @@
+@article{go2025vist3a,
+  title={VIST3A: Text-to-3D by Stitching a Multi-view Reconstruction Network to a Video Generator},
+  author={Go, Hyojun and Narnhofer, Dominik and Bhat, Goutam and Truong, Prune and Tombari, Federico and Schindler, Konrad},
+  journal={arXiv preprint arXiv:2510.13454},
+  year={2025}
+}
